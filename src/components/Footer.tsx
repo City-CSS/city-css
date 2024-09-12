@@ -1,3 +1,5 @@
+import Image from "next/image";
+import Cube from "../assets/cube.png";
 export default function Footer() {
   return (
     <footer className="relative border-t border-gray-100 lg:pt-32 pb-8 dark:border-gray-800 lg:px-0 md:px-0 px-10">
@@ -18,6 +20,7 @@ export default function Footer() {
           <div className="col-span-8 md:col-span-2 lg:col-span-3">
             <div className="flex h-full items-center justify-between gap-6 border-b border-white py-6 dark:border-gray-800 md:flex-col md:items-start md:justify-between md:space-y-6 md:border-none md:py-0">
               <div>
+                <Image src={Cube} alt="City University Logo" className="w-16" />
                 <a href="/" className="mt-2 inline-block text-sm">
                   Designed with Love
                 </a>
@@ -70,7 +73,7 @@ export default function Footer() {
             <div className="grid grid-cols-2 gap-6 pb-16 sm:grid-cols-3 md:pl-16">
               <div>
                 <h2 className="text-base font-medium text-gray-800 dark:text-gray-200">
-                  Company
+                  Society
                 </h2>
                 <ul className="mt-4 list-inside space-y-4">
                   <li>
@@ -78,7 +81,7 @@ export default function Footer() {
                       href="#"
                       className="text-sm duration-100 hover:text-primary dark:hover:text-white"
                     >
-                      About us
+                      Students Union
                     </a>
                   </li>
                   <li>
@@ -86,7 +89,7 @@ export default function Footer() {
                       href="#"
                       className="text-sm duration-100 hover:text-primary dark:hover:text-white"
                     >
-                      FAQs{" "}
+                      About Us
                     </a>
                   </li>
                   <li>
@@ -102,14 +105,15 @@ export default function Footer() {
                       href="#"
                       className="text-sm duration-100 hover:text-primary dark:hover:text-white"
                     >
-                      Carrers
+                      Join{" "}
                     </a>
                   </li>
                 </ul>
               </div>
+
               <div>
                 <h2 className="text-base font-medium text-gray-800 dark:text-gray-200">
-                  Products
+                  Socials
                 </h2>
                 <ul className="mt-4 list-inside space-y-4">
                   <li>
@@ -117,7 +121,7 @@ export default function Footer() {
                       href="#"
                       className="text-sm duration-100 hover:text-primary dark:hover:text-white"
                     >
-                      Features
+                      Discord
                     </a>
                   </li>
                   <li>
@@ -125,7 +129,7 @@ export default function Footer() {
                       href="#"
                       className="text-sm duration-100 hover:text-primary dark:hover:text-white"
                     >
-                      Integrations
+                      Whatsapp{" "}
                     </a>
                   </li>
                   <li>
@@ -133,46 +137,7 @@ export default function Footer() {
                       href="#"
                       className="text-sm duration-100 hover:text-primary dark:hover:text-white"
                     >
-                      Change Log
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="#"
-                      className="text-sm duration-100 hover:text-primary dark:hover:text-white"
-                    >
-                      Commercialisti
-                    </a>
-                  </li>
-                </ul>
-              </div>
-              <div>
-                <h2 className="text-base font-medium text-gray-800 dark:text-gray-200">
-                  Resources
-                </h2>
-                <ul className="mt-4 list-inside space-y-4">
-                  <li>
-                    <a
-                      href="#"
-                      className="text-sm duration-100 hover:text-primary dark:hover:text-white"
-                    >
-                      Novità Legislative Contabili{" "}
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="#"
-                      className="text-sm duration-100 hover:text-primary dark:hover:text-white"
-                    >
-                      Guide per la tua ditta{" "}
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="#"
-                      className="text-sm duration-100 hover:text-primary dark:hover:text-white"
-                    >
-                      Glossario Semplificato{" "}
+                      Instagram{" "}
                     </a>
                   </li>
                 </ul>

@@ -154,6 +154,13 @@ const Hero: FC = () => {
             <div className="mb-6 bg-white-500 rounded-full flex items-center justify-center">
               <Image src={Cube} alt="City University Logo" className="w-16" />
             </div>
+            <div className="mx-auto max-w-2xl text-center mb-8">
+              <a href="https://discord.gg/cJCfsvpK">
+                <div className=" bg-gray-100 text-md leading-6 text-gray-400 ring-1 ring-gray-900/10 hover:ring-gray-900/20 rounded-full px-5">
+                  Join our discord Now!
+                </div>
+              </a>
+            </div>
             <h1 className="text-4xl sm:text-6xl font-bold mb-3">
               Welcome to City University <br />
               Computer Science Society
@@ -167,16 +174,13 @@ const Hero: FC = () => {
             </p>
 
             <div className="flex flex-col bg-white z-50 sm:flex-row space-y-4 sm:space-y-0 sm:space-x-2 mb-4">
-              <input
-                type="email"
-                placeholder="Enter your email"
-                className="px-4 py-2 border border-gray-300 rounded-md focus:ring focus:ring-green-300 w-full sm:w-auto"
-              />
-              <ShimmerButton className="shadow-2xl">
-                <span className="whitespace-pre-wrap text-center text-sm font-medium leading-none tracking-tight text-white dark:from-white dark:to-slate-900/10 lg:text-lg">
-                  Subscribe Now
-                </span>
-              </ShimmerButton>
+              <a href="https://www.csgsu.co.uk/community/societies/society/css/">
+                <ShimmerButton className="shadow-2xl">
+                  <span className="whitespace-pre-wrap text-center text-sm font-medium leading-none tracking-tight text-white dark:from-white dark:to-slate-900/10 lg:text-lg">
+                    Subscribe Now
+                  </span>
+                </ShimmerButton>
+              </a>
             </div>
             <p className="text-sm text-gray-500">
               <span role="img" aria-label="calendar">
