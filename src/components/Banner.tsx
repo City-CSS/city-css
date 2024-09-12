@@ -2,7 +2,7 @@ export default function Banner() {
   return (
     <section
       id="get-started-today"
-      className="relative overflow-hidden bg-[#ca3042] py-24"
+      className="relative overflow-hidden bg-red-500 py-24"
     >
       <img
         alt="University Campus Background"
