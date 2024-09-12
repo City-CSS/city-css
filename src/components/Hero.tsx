@@ -1,4 +1,4 @@
-import React from "react";
+import React, { FC } from "react";
 import { FaComments, FaFilePdf } from "react-icons/fa";
 import { cn } from "@/lib/utils";
 import AnimatedGridPattern from "@/components/magicui/animated-grid-pattern";
@@ -6,7 +6,19 @@ import ShimmerButton from "@/components/magicui/shimmer-button";
 import Cube from "../assets/cube.png"; // Ensure this path is correct
 import Image from "next/image";
 
-const DetailedCard = ({
+// Define the props for DetailedCard
+interface DetailedCardProps {
+  title: string;
+  description: string;
+  date: string;
+  comments: number;
+  tags: string[];
+  icon?: boolean;
+  svgImage?: string;
+}
+
+// DetailedCard component with proper prop types
+const DetailedCard: FC<DetailedCardProps> = ({
   title,
   description,
   date,
@@ -33,7 +45,7 @@ const DetailedCard = ({
         ))}
       </div>
       <div className="flex items-center space-x-2 text-gray-500">
-        {icon && <FaFilePdf className="text-red-600" />}
+        {icon && <FaFilePdf />}
         <FaComments />
         <span className="text-xs">{comments}</span>
       </div>
@@ -46,7 +58,7 @@ const DetailedCard = ({
   </div>
 );
 
-const Hero = () => {
+const Hero: FC = () => {
   return (
     <div className="bg-white">
       <div className="relative isolate">
