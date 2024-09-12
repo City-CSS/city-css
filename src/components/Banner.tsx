@@ -2,10 +2,10 @@ export default function Banner() {
   return (
     <section
       id="get-started-today"
-      className="relative overflow-hidden bg-[#3760ff] py-24 mt-16"
+      className="relative overflow-hidden bg-[#ca3042] py-24"
     >
       <img
-        alt=""
+        alt="University Campus Background"
         loading="lazy"
         width="2347"
         height="1244"
@@ -18,14 +18,17 @@ export default function Banner() {
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-lg text-center">
           <h2 className="font-display text-4xl tracking-tight text-white font-semibold sm:text-5xl">
-            Get Started Today
+            Join CSS
           </h2>
-          <p className="mt-4 text-lg tracking-tight text-white">Hello</p>
+          <p className="mt-4 text-lg tracking-tight text-white">
+            Become part of a thriving community dedicated to exploring
+            technology, building skills, and advancing your career.{" "}
+          </p>
           <a
             className="group inline-flex items-center justify-center rounded-full py-2 px-4 text-sm font-semibold focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2 bg-white text-slate-900 hover:bg-blue-50 active:bg-blue-200 active:text-slate-600 focus-visible:outline-white mt-10"
             href="/contact"
           >
-            Contact Us
+            Get In Touch
           </a>
         </div>
       </div>

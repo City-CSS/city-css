@@ -3,6 +3,8 @@ import { FaComments, FaFilePdf } from "react-icons/fa";
 import { cn } from "@/lib/utils";
 import AnimatedGridPattern from "@/components/magicui/animated-grid-pattern";
 import ShimmerButton from "@/components/magicui/shimmer-button";
+import Cube from "../assets/cube.png"; // Ensure this path is correct
+import Image from "next/image";
 
 const DetailedCard = ({
   title,
@@ -36,7 +38,7 @@ const DetailedCard = ({
         <span className="text-xs">{comments}</span>
       </div>
       {svgImage && (
-        <div className=" flex justify-center">
+        <div className="flex justify-center">
           <img src={svgImage} alt="SVG Illustration" className="h-10 w-15" />
         </div>
       )}
@@ -46,14 +48,14 @@ const DetailedCard = ({
 
 const Hero = () => {
   return (
-    <div className="bg-white min-h-screen">
+    <div className="bg-white">
       <div className="relative isolate">
         <div
           className="absolute z-50 inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
           aria-hidden="true"
         >
           <div
-            className="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem] md:w-[50rem] lg:w-[60rem]"
+            className="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#ff80b5] to-[#c11c2f] opacity-30 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem] md:w-[50rem] lg:w-[60rem]"
             style={{
               clipPath:
                 "polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)",
@@ -64,98 +66,103 @@ const Hero = () => {
         <div className="relative bg-gray-50 min-h-screen flex flex-col items-center justify-center overflow-hidden px-4">
           <div className="absolute top-6 -left-12 transform -rotate-12 hidden sm:block">
             <DetailedCard
-              title="hello"
-              description="E risparmia tempo prezioso"
-              date="21/03/22"
-              comments={12}
-              tags={["Feedback", "Design "]}
+              title="Join Our Workshops"
+              description="Participate in coding workshops and tech talks."
+              date="Coming Soon"
+              comments={0}
+              tags={["Workshops", "Tech Talks"]}
             />
           </div>
           <div className="absolute bottom-20 -right-12 transform -rotate-3 hidden sm:block">
             <DetailedCard
-              title="$45.000"
-              date="D-3"
-              comments={8}
-              tags={["Design System"]}
+              title="Hackathons & Competitions"
+              description="Showcase your skills in exciting challenges."
+              date="Annual"
+              comments={0}
+              tags={["Hackathons", "Competitions"]}
             />
           </div>
 
           <div className="absolute bottom-20 -left-12 transform rotate-6 hidden sm:block">
             <DetailedCard
-              title="Supporto clienti"
-              description="Amiamo i nostri clienti e siamo aperti a feedback"
-              date="12/07/23"
-              comments={5}
-              tags={["Support"]}
+              title="Networking Opportunities"
+              description="Connect with peers and industry professionals."
+              date="Ongoing"
+              comments={0}
+              tags={["Networking", "Career"]}
             />
           </div>
           <div className="absolute top-4 -right-20 transform -rotate-12 hidden sm:block">
             <DetailedCard
-              title="Velocità di sviluppo"
-              description="Per offrire il servizio migliore"
-              date="18/08/23"
-              comments={9}
-              tags={["Development"]}
+              title="Community Projects"
+              description="Contribute to open-source projects and build your portfolio."
+              date="Ongoing"
+              comments={0}
+              tags={["Open Source", "Projects"]}
             />
           </div>
           <div className="absolute top-48 -left-10 transform rotate-12 hidden sm:block">
             <DetailedCard
-              title="Inventario Integrato"
-              description="Per avere tutto sotto controllo"
-              date="15/06/23"
-              comments={7}
-              tags={["Inventory"]}
+              title="Career Support"
+              description="Get guidance on internships, job placements, and interviews."
+              date="Available"
+              comments={0}
+              tags={["Career Support", "Guidance"]}
             />
           </div>
           <div className="absolute bottom-56 -left-10 transform -rotate-12 hidden sm:block">
             <DetailedCard
-              title="Grafica intuitiva"
-              description="Prioritizziamo la semplicità e funzionalità"
-              date="30/04/23"
-              comments={6}
-              tags={["UI/UX"]}
+              title="Coding Bootcamps"
+              description="Intensive bootcamps to master new technologies."
+              date="Scheduled"
+              comments={0}
+              tags={["Bootcamps", "Learning"]}
             />
           </div>
           <div className="absolute top-40 -right-20 transform rotate-6 hidden sm:block">
             <DetailedCard
-              title="Sviluppato per tutti"
-              description="Ditta può essere usato da chiunque"
-              date="25/05/23"
-              comments={4}
-              tags={["Accessibility"]}
+              title="Tech Talks"
+              description="Hear from industry experts on the latest trends."
+              date="Monthly"
+              comments={0}
+              tags={["Tech Talks", "Experts"]}
             />
           </div>
           <div className="absolute bottom-52 -right-16 transform -rotate-12 hidden sm:block">
             <DetailedCard
-              title="Estratti conto"
-              description="Accedi alle tue finanze dalla nostra piattaforma"
-              date="22/03/23"
-              comments={10}
-              tags={["Finance"]}
+              title="Social Events"
+              description="Connect with fellow students through fun activities."
+              date="Monthly"
+              comments={0}
+              tags={["Social", "Events"]}
             />
           </div>
 
           <div className="relative z-10 flex flex-col items-center text-center mt-12">
-            <div className="mb-6 bg-white-500 rounded-full flex items-center justify-center"></div>
+            <div className="mb-6 bg-white-500 rounded-full flex items-center justify-center">
+              <Image src={Cube} alt="City University Logo" className="w-16" />
+            </div>
             <h1 className="text-4xl sm:text-6xl font-bold mb-3">
               Welcome to City University <br />
               Computer Science Society
             </h1>
-            <p className="text-lg sm:text-xl text-gray-600 mb-6">
-              Ci basta la tua mail per aggiornarti sullo sviluppo e aiutarci
-              nello sviluppo <br />
-              della piattaforma Iscriviti Ora!
+            <p className="text-md text-gray-500 mb-6">
+              At the CSS, we foster a thriving community for tech enthusiasts
+              and innovators.
+              <br />
+              Join us to explore new technologies, collaborate on projects, and
+              advance your career.
             </p>
 
-            <div className="flex flex-col bg-white z-50  sm:flex-row space-y-4 sm:space-y-0 sm:space-x-2 mb-4">
+            <div className="flex flex-col bg-white z-50 sm:flex-row space-y-4 sm:space-y-0 sm:space-x-2 mb-4">
               <input
                 type="email"
-                placeholder="Inserisci la tua mail"
+                placeholder="Enter your email"
                 className="px-4 py-2 border border-gray-300 rounded-md focus:ring focus:ring-green-300 w-full sm:w-auto"
               />
               <ShimmerButton className="shadow-2xl">
                 <span className="whitespace-pre-wrap text-center text-sm font-medium leading-none tracking-tight text-white dark:from-white dark:to-slate-900/10 lg:text-lg">
-                  Shimmer Button
+                  Subscribe Now
                 </span>
               </ShimmerButton>
             </div>
@@ -163,7 +170,7 @@ const Hero = () => {
               <span role="img" aria-label="calendar">
                 🗓️
               </span>{" "}
-              Unisciti per partecipare alla fase di testing
+              Join us to participate in events
             </p>
           </div>
         </div>
