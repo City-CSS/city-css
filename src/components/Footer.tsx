@@ -2,7 +2,7 @@ import Image from "next/image";
 import Cube from "../assets/cube.png";
 export default function Footer() {
   return (
-    <footer className="relative border-t border-gray-100 lg:pt-32 pb-8 dark:border-gray-800 lg:px-0 md:px-0 px-10">
+    <div className="relative border-t border-gray-100 lg:pt-32 pb-8 dark:border-gray-800 lg:px-0 md:px-0 px-10">
       <div
         className="absolute inset-x-0 inset-y-0 -z-10 transform-gpu overflow-hidden blur-3xl"
         aria-hidden="true"
@@ -27,7 +27,7 @@ export default function Footer() {
               </div>
               <div className="flex gap-6">
                 <a
-                  href="https://www.instagram.com/ditta.it/"
+                  href="/"
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="instagram"
@@ -48,7 +48,7 @@ export default function Footer() {
                 </a>
 
                 <a
-                  href="https://www.linkedin.com/company/dittatech/about/"
+                  href="/"
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="linkedin"
@@ -158,28 +158,10 @@ export default function Footer() {
               >
                 Privacy{" "}
               </a>
-              <a
-                href="/terms"
-                className="text-sm hover:text-primary dark:hover:text-primaryLight"
-              >
-                T&C{" "}
-              </a>
-              <a
-                href="/cookie"
-                className="text-sm hover:text-primary dark:hover:text-primaryLight"
-              >
-                Cookies{" "}
-              </a>{" "}
-              <a
-                href="/aup"
-                className="text-sm hover:text-primary dark:hover:text-primaryLight"
-              >
-                AUP
-              </a>
             </div>
           </div>
         </div>
       </div>
-    </footer>
+    </div>
   );
 }
