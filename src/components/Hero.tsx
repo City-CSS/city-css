@@ -152,7 +152,7 @@ const Hero: FC = () => {
 
           <div className="relative z-10 flex flex-col items-center text-center mt-12">
             <div className="mb-6 bg-white-500 rounded-full flex items-center justify-center">
-              <Image src={Cube} alt="City University Logo" className="w-16" />
+              <Image src={Cube} alt="City University Logo" className="w-24" />
             </div>
             <div className="mx-auto max-w-2xl text-center mb-8">
               <a href="https://discord.gg/cJCfsvpK">
