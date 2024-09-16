@@ -18,7 +18,7 @@ export default function Banner() {
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-lg text-center">
           <h2 className="font-display text-4xl tracking-tight text-white font-semibold sm:text-5xl">
-            Join CSS
+            Want to sponsor?
           </h2>
           <p className="mt-4 text-lg tracking-tight text-white">
             Become part of a thriving community dedicated to exploring

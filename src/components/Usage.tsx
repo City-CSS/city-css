@@ -11,9 +11,8 @@ export default function Usage() {
             Empower Your Journey with the CS Society
           </h2>
           <p className="mt-2 text-lg text-gray-600 hidden md:block lg:block">
-            Join our Computer Science Society and unlock opportunities to grow,
-            learn, and collaborate with like-minded individuals passionate about
-            technology.
+            Join our Computer Science Society and dive deep into the world of
+            software engineering!
           </p>
         </div>
 
@@ -38,12 +37,12 @@ export default function Usage() {
             </svg>
 
             <h3 className="mt-4 font-semibold text-gray-900">
-              Hackathons & Competitions
+              Introduction to Software Development Life Cycle (SDLC)
             </h3>
             <p className="mt-2 text-gray-700">
-              Participate in exciting hackathons and coding competitions, where
-              you can test your skills, build innovative projects, and
-              collaborate with peers.
+              Learn the foundational stages of software development, from
+              requirement gathering and design to testing and deployment, for
+              efficient project management.
             </p>
           </li>
           <li className="rounded-2xl border border-gray-200 p-8">
@@ -62,12 +61,11 @@ export default function Usage() {
               />
             </svg>
             <h3 className="mt-6 font-semibold text-gray-900">
-              Skill Development Workshops
+              Agile Methodologies and Scrum
             </h3>
             <p className="mt-2 text-gray-700">
-              Sharpen your coding skills through our workshops on various
-              programming languages, tools, and technologies, led by industry
-              experts.
+              Learn how to effectively use Agile and Scrum frameworks to manage
+              projects and ensure continuous delivery of high-quality software.
             </p>
           </li>
           <li className="rounded-2xl border border-gray-200 p-8">
@@ -86,12 +84,11 @@ export default function Usage() {
               />
             </svg>
             <h3 className="mt-6 font-semibold text-gray-900">
-              Career Talks & Networking
+              Version Control with Git & GitHub
             </h3>
             <p className="mt-2 text-gray-700">
-              Learn from professionals in the tech industry during career talks
-              and build your network by interacting with alumni, recruiters, and
-              peers.
+              Master version control using Git and collaborate seamlessly on
+              coding projects through GitHub, following industry best practices.
             </p>
           </li>
           <li className="rounded-2xl border border-gray-200 p-8">
@@ -110,12 +107,12 @@ export default function Usage() {
               />
             </svg>
             <h3 className="mt-6 font-semibold text-gray-900">
-              Skill Development Workshops
+              Object-Oriented Programming Principles
             </h3>
             <p className="mt-2 text-gray-700">
-              Sharpen your coding skills through our workshops on various
-              programming languages, tools, and technologies, led by industry
-              experts.
+              Strengthen your programming skills by understanding OOP principles
+              like inheritance, encapsulation, and polymorphism, essential for
+              modern software development.
             </p>
           </li>
           <li className="rounded-2xl border border-gray-200 p-8">
@@ -134,36 +131,12 @@ export default function Usage() {
               />
             </svg>
             <h3 className="mt-6 font-semibold text-gray-900">
-              Career Talks & Networking
+              Software Architecture and Design Patterns
             </h3>
             <p className="mt-2 text-gray-700">
-              Learn from professionals in the tech industry during career talks
-              and build your network by interacting with alumni, recruiters, and
-              peers.
-            </p>
-          </li>
-          <li className="rounded-2xl border border-gray-200 p-8">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              strokeWidth="1.5"
-              stroke="currentColor"
-              className="size-8"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M13.5 21v-7.5a.75.75 0 0 1 .75-.75h3a.75.75 0 0 1 .75.75V21m-4.5 0H2.36m11.14 0H18m0 0h3.64m-1.39 0V9.349M3.75 21V9.349m0 0a3.001 3.001 0 0 0 3.75-.615A2.993 2.993 0 0 0 9.75 9.75c.896 0 1.7-.393 2.25-1.016a2.993 2.993 0 0 0 2.25 1.016c.896 0 1.7-.393 2.25-1.015a3.001 3.001 0 0 0 3.75.614m-16.5 0a3.004 3.004 0 0 1-.621-4.72l1.189-1.19A1.5 1.5 0 0 1 5.378 3h13.243a1.5 1.5 0 0 1 1.06.44l1.19 1.189a3 3 0 0 1-.621 4.72M6.75 18h3.75a.75.75 0 0 0 .75-.75V13.5a.75.75 0 0 0-.75-.75H6.75a.75.75 0 0 0-.75.75v3.75c0 .414.336.75.75.75Z"
-              />
-            </svg>
-            <h3 className="mt-6 font-semibold text-gray-900">
-              Career Talks & Networking
-            </h3>
-            <p className="mt-2 text-gray-700">
-              Learn from professionals in the tech industry during career talks
-              and build your network by interacting with alumni, recruiters, and
-              peers.
+              Learn to design scalable and maintainable software systems, using
+              popular design patterns and principles that are key in building
+              robust applications.
             </p>
           </li>
         </ul>
