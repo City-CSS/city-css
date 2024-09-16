@@ -150,10 +150,15 @@ const Hero: FC = () => {
             />
           </div>
 
-          <div className="relative z-10 flex flex-col items-center text-center mt-12">
-            <div className="mb-6 bg-white-500 rounded-full flex items-center justify-center">
-              <Image src={Cube} alt="City University Logo" className="w-24" />
+          <div className="relative z-10 flex flex-col items-center text-center ">
+            <div className="mb-2 bg-white-500 rounded-full flex items-center justify-center w-full">
+              <Image
+                src={Cube}
+                alt="City University Logo"
+                className="w-44 h-auto"
+              />{" "}
             </div>
+
             <div className="mx-auto max-w-2xl text-center mb-8">
               <a href="https://discord.gg/cJCfsvpK">
                 <div className=" bg-gray-100 text-md leading-6 text-gray-400 ring-1 ring-gray-900/10 hover:ring-gray-900/20 rounded-full px-5">
