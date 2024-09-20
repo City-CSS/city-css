@@ -3,6 +3,7 @@ import { NextRequest } from "next/server";
 import { Client } from "pg";
 
 interface RequestBody {
+  name: string; // Include name field
   email: string;
 }
 
@@ -15,11 +16,12 @@ export async function POST(request: NextRequest) {
   try {
     await client.connect(); // Connect to the database
 
-    const { email }: RequestBody = await request.json();
+    // Parse the request body to extract name and email
+    const { name, email }: RequestBody = await request.json();
 
     // Check if email already exists
     const result = await client.query(
-      "SELECT message FROM message WHERE message = $1",
+      "SELECT email FROM message WHERE email = $1",
       [email],
     );
 
@@ -32,8 +34,11 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    // Insert the email into the database
-    await client.query("INSERT INTO message (message) VALUES ($1)", [email]);
+    // Insert the name and email into the database
+    await client.query("INSERT INTO message (name, email) VALUES ($1, $2)", [
+      name,
+      email,
+    ]);
 
     // Construct the response
     return NextResponse.json({
