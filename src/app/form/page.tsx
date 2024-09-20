@@ -1,6 +1,7 @@
 "use client";
 import { useState, FormEvent } from "react";
-
+import Image from "next/image";
+import logo from "../../assets/cube.png";
 export default function Home() {
   const [email, setEmail] = useState<string>("");
   const [name, setName] = useState<string>("");
@@ -33,7 +34,8 @@ export default function Home() {
 
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100 p-6">
-      <h1 className="text-2xl font-bold mb-6 text-gray-800">
+      <Image src={logo} alt="logo" className="h-24 w-24" />
+      <h1 className="text-2xl font-bold mb-6 text-gray-800 text-center">
         Join Our Welcome Day Event
       </h1>
       <form
@@ -58,12 +60,15 @@ export default function Home() {
         />
         <button
           type="submit"
-          className="w-full py-3 bg-blue-600 text-white font-semibold rounded-md hover:bg-blue-700 transition duration-200"
+          className="w-full py-3 bg-[#832b2b] text-white font-semibold rounded-md hover:bg-[#832b2b] transition duration-200"
         >
           Join
         </button>
       </form>
       {message && <p className="mt-4 text-green-800">{message}</p>}
+      <p className="text-gray-600">
+        You wont need any ticket its just to know the overall numbers
+      </p>
     </div>
   );
 }
