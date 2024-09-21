@@ -39,13 +39,15 @@ export function FileTreeDemo() {
                     <p>Session 1: Introduction to Git</p>
                   </File>
                   <File value="4">
-                    <p>Session 2:</p>
+                    <p>Session 2: Branching, merging and collaboration</p>
                   </File>
                   <File value="4">
-                    <p>Session 3:</p>
+                    <p>
+                      Session 3: Adcanced git features and history management
+                    </p>
                   </File>
                   <File value="4">
-                    <p>Session 3:</p>
+                    <p>Session 4: Lets write some code</p>
                   </File>
                 </Folder>
                 <Folder value="5" element="AI & ML">

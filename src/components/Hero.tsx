@@ -150,7 +150,7 @@ const Hero: FC = () => {
             />
           </div>
 
-          <div className="relative z-10 flex flex-col items-center text-center ">
+          <div className="mb-16 relative z-10 flex flex-col items-center text-center ">
             <div className="mb-2 bg-white-500 rounded-full flex items-center justify-center w-full">
               <Image
                 src={Cube}

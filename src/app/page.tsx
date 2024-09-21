@@ -6,9 +6,11 @@ import Banner2 from "@/components/Banner2";
 import { IconCloudDemo } from "@/components/IconCloudDemo";
 import Footer from "@/components/Footer";
 import { FileTreeDemo } from "@/components/FileTree";
+import TopBanner from "@/components/TopBanner";
 export default function Home() {
   return (
     <>
+      <TopBanner />
       <HeroSection />
       <Banner />
       <FileTreeDemo />

@@ -27,7 +27,7 @@ export default function Footer() {
               </div>
               <div className="flex gap-6">
                 <a
-                  href="/"
+                  href="https://www.instagram.com/css_city/"
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="instagram"
@@ -78,7 +78,7 @@ export default function Footer() {
                 <ul className="mt-4 list-inside space-y-4">
                   <li>
                     <a
-                      href="#"
+                      href="https://www.csgsu.co.uk/community/societies/society/css/"
                       className="text-sm duration-100 hover:text-primary dark:hover:text-white"
                     >
                       Students Union
@@ -102,7 +102,7 @@ export default function Footer() {
                   </li>
                   <li>
                     <a
-                      href="#"
+                      href="https://www.csgsu.co.uk/community/societies/society/css/"
                       className="text-sm duration-100 hover:text-primary dark:hover:text-white"
                     >
                       Join{" "}
@@ -118,7 +118,7 @@ export default function Footer() {
                 <ul className="mt-4 list-inside space-y-4">
                   <li>
                     <a
-                      href="#"
+                      href="https://discord.gg/MqzTbKsu"
                       className="text-sm duration-100 hover:text-primary dark:hover:text-white"
                     >
                       Discord
@@ -126,7 +126,7 @@ export default function Footer() {
                   </li>
                   <li>
                     <a
-                      href="#"
+                      href="https://chat.whatsapp.com/JENi7yzZA5T4wFDWIEqb03"
                       className="text-sm duration-100 hover:text-primary dark:hover:text-white"
                     >
                       Whatsapp{" "}
@@ -134,7 +134,7 @@ export default function Footer() {
                   </li>
                   <li>
                     <a
-                      href="#"
+                      href="https://www.instagram.com/css_city/"
                       className="text-sm duration-100 hover:text-primary dark:hover:text-white"
                     >
                       Instagram{" "}
