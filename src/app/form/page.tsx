@@ -20,14 +20,16 @@ export default function Home() {
       });
 
       if (response.ok) {
-        const data: { message: string } = await response.json();
+        const data = await response.json();
         setMessage(data.message);
         setEmail("");
         setName("");
       } else {
-        setMessage("Failed to join the waiting list. Please try again.");
+        const errorData = await response.json(); // Log the actual error response
+        setMessage(`Failed: ${errorData.message}`);
       }
     } catch (error) {
+      console.error("Error occurred:", error);
       setMessage("An error occurred. Please try again.");
     }
   };
