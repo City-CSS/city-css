@@ -16,48 +16,53 @@ export function FileTreeDemo() {
         />
       </div>
       <div className="relative z-10 flex items-center justify-center mt-12">
-        <div className="relative flex flex-col overflow-hidden rounded-lg  p-8">
-          <div className="mx-auto max-w-4xl lg:max-w-2xl md:max-w-2xl text-center">
-            <h2 className="text-4xl font-bold tracking-tight text-gray-900">
+        <div className="relative flex flex-col overflow-hidden rounded-lg p-8 w-full lg:max-w-4xl md:max-w-2xl sm:max-w-full">
+          <div className="mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-gray-900">
               Our Modules Over the Year
             </h2>
-            <p className="mt-2 text-lg text-gray-600">
+            <p className="mt-2 text-base md:text-lg text-gray-600">
               Join our Computer Science Society and dive deep into the world of
               software engineering!
             </p>
           </div>
           <div className="flex justify-center mt-8 w-full">
             <Tree
-              className="p-4 overflow-auto  border border-gray-300 rounded-lg max-w-full"
-              initialSelectedId="7"
+              className="p-4 overflow-auto border border-gray-300 rounded-lg w-full max-w-full lg:max-w-3xl md:max-w-xl "
               initialExpandedItems={["1", "2", "5", "6", "10"]}
               elements={ELEMENTS}
             >
               <Folder element="Computer Science Society" value="1">
                 <Folder value="2" element="Software Engineering">
                   <File value="3">
-                    <p>Session 1: Introduction to Git</p>
-                  </File>
-                  <File value="4">
-                    <p>Session 2: Branching, merging and collaboration</p>
-                  </File>
-                  <File value="4">
-                    <p>
-                      Session 3: Adcanced git features and history management
+                    <p className="pl-6 whitespace-nowrap">
+                      Session 1: Introduction to Git
                     </p>
                   </File>
                   <File value="4">
-                    <p>Session 4: Lets write some code</p>
+                    <p className="pl-6 whitespace-nowrap">
+                      Session 2: Branching, merging and collaboration
+                    </p>
+                  </File>
+                  <File value="4">
+                    <p className="pl-6 whitespace-nowrap">
+                      Session 3: Advanced git features and history management
+                    </p>
+                  </File>
+                  <File value="4">
+                    <p className="pl-6 whitespace-nowrap">
+                      Session 4: Let's write some code
+                    </p>
                   </File>
                 </Folder>
                 <Folder value="5" element="AI & ML">
                   <File value="7">
-                    <p>Coming soon :)</p>
+                    <p className="pl-6 whitespace-nowrap">Coming soon :)</p>
                   </File>
                 </Folder>
                 <Folder value="10" element="BlockChain">
                   <File value="11">
-                    <p>Coming soon :)</p>
+                    <p className="pl-6 whitespace-nowrap">Coming soon :)</p>
                   </File>
                 </Folder>
               </Folder>
@@ -78,58 +83,51 @@ const ELEMENTS = [
       {
         id: "2",
         isSelectable: true,
-        name: "app",
+        name: "Software Engineering",
         children: [
           {
             id: "3",
             isSelectable: true,
-            name: "layout.tsx",
+            name: "Session 1: Introduction to Git",
           },
           {
             id: "4",
             isSelectable: true,
-            name: "page.tsx",
+            name: "Session 2: Branching, merging and collaboration",
+          },
+          {
+            id: "5",
+            isSelectable: true,
+            name: "Session 3: Advanced git features and history management",
+          },
+          {
+            id: "6",
+            isSelectable: true,
+            name: "Session 4: Let's write some code",
           },
         ],
       },
       {
-        id: "5",
+        id: "7",
         isSelectable: true,
-        name: "components",
+        name: "AI & ML",
         children: [
-          {
-            id: "6",
-            isSelectable: true,
-            name: "ui",
-            children: [
-              {
-                id: "7",
-                isSelectable: true,
-                name: "button.tsx",
-              },
-            ],
-          },
           {
             id: "8",
             isSelectable: true,
-            name: "header.tsx",
-          },
-          {
-            id: "9",
-            isSelectable: true,
-            name: "footer.tsx",
+            name: "Coming soon :)",
           },
         ],
       },
       {
         id: "10",
         isSelectable: true,
-        name: "lib",
+        name: "BlockChain",
         children: [
           {
             id: "11",
             isSelectable: true,
-            name: "utils.ts",
+            name: "Coming soon :)",
           },
         ],
       },

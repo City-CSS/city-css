@@ -1,3 +1,14 @@
+import {
+  FaCode,
+  FaGitAlt,
+  FaBrain,
+  FaLaptopCode,
+  FaShieldAlt,
+} from "react-icons/fa";
+import { AiOutlineStock } from "react-icons/ai";
+import { GiArtificialHive } from "react-icons/gi";
+import { TbLock } from "react-icons/tb";
+
 export default function Usage() {
   return (
     <section
@@ -20,123 +31,78 @@ export default function Usage() {
           role="list"
           className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-6 text-sm sm:mt-20 sm:grid-cols-2 md:gap-y-10 lg:max-w-none lg:grid-cols-3"
         >
+          {/* Card 1: Interview Preparation */}
           <li className="rounded-2xl border border-gray-200 p-8">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              strokeWidth="1.5"
-              stroke="currentColor"
-              className="size-8"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M15.75 10.5V6a3.75 3.75 0 1 0-7.5 0v4.5m11.356-1.993 1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 0 1-1.12-1.243l1.264-12A1.125 1.125 0 0 1 5.513 7.5h12.974c.576 0 1.059.435 1.119 1.007ZM8.625 10.5a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm7.5 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z"
-              />
-            </svg>
-
+            <FaCode size={40} className="text-gray-600" />
             <h3 className="mt-4 font-semibold text-gray-900">
-              Introduction to Software Development Life Cycle (SDLC)
+              Interview Preparation
             </h3>
             <p className="mt-2 text-gray-700">
-              Learn the foundational stages of software development, from
-              requirement gathering and design to testing and deployment, for
-              efficient project management.
+              Prepare for technical interviews with hands-on practice of coding
+              challenges, mental math exercises, and mock interview scenarios.
             </p>
           </li>
+
+          {/* Card 2: Git and Version Control */}
           <li className="rounded-2xl border border-gray-200 p-8">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              strokeWidth="1.5"
-              stroke="currentColor"
-              className="size-8"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M8.25 18.75a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0m3 0h6m-9 0H3.375a1.125 1.125 0 0 1-1.125-1.125V14.25m17.25 4.5a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0m3 0h1.125c.621 0 1.129-.504 1.09-1.124a17.902 17.902 0 0 0-3.213-9.193 2.056 2.056 0 0 0-1.58-.86H14.25M16.5 18.75h-2.25m0-11.177v-.958c0-.568-.422-1.048-.987-1.106a48.554 48.554 0 0 0-10.026 0 1.106 1.106 0 0 0-.987 1.106v7.635m12-6.677v6.677m0 4.5v-4.5m0 0h-12"
-              />
-            </svg>
+            <FaGitAlt size={40} className="text-gray-600" />
             <h3 className="mt-6 font-semibold text-gray-900">
-              Agile Methodologies and Scrum
+              Git and Version Control
             </h3>
             <p className="mt-2 text-gray-700">
-              Learn how to effectively use Agile and Scrum frameworks to manage
-              projects and ensure continuous delivery of high-quality software.
+              Master Git fundamentals and collaborate on projects via GitHub.
+              Learn how to manage version control, branch workflows, and code
+              reviews effectively.
             </p>
           </li>
+
+          {/* Card 3: AI and Machine Learning */}
           <li className="rounded-2xl border border-gray-200 p-8">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              strokeWidth="1.5"
-              stroke="currentColor"
-              className="size-8"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M13.5 21v-7.5a.75.75 0 0 1 .75-.75h3a.75.75 0 0 1 .75.75V21m-4.5 0H2.36m11.14 0H18m0 0h3.64m-1.39 0V9.349M3.75 21V9.349m0 0a3.001 3.001 0 0 0 3.75-.615A2.993 2.993 0 0 0 9.75 9.75c.896 0 1.7-.393 2.25-1.016a2.993 2.993 0 0 0 2.25 1.016c.896 0 1.7-.393 2.25-1.015a3.001 3.001 0 0 0 3.75.614m-16.5 0a3.004 3.004 0 0 1-.621-4.72l1.189-1.19A1.5 1.5 0 0 1 5.378 3h13.243a1.5 1.5 0 0 1 1.06.44l1.19 1.189a3 3 0 0 1-.621 4.72M6.75 18h3.75a.75.75 0 0 0 .75-.75V13.5a.75.75 0 0 0-.75-.75H6.75a.75.75 0 0 0-.75.75v3.75c0 .414.336.75.75.75Z"
-              />
-            </svg>
+            <GiArtificialHive size={40} className="text-gray-600" />
             <h3 className="mt-6 font-semibold text-gray-900">
-              Version Control with Git & GitHub
+              AI and Machine Learning
             </h3>
             <p className="mt-2 text-gray-700">
-              Master version control using Git and collaborate seamlessly on
-              coding projects through GitHub, following industry best practices.
+              Dive into the world of Artificial Intelligence and Machine
+              Learning. Learn the core concepts and implement basic algorithms
+              to build smart applications.
             </p>
           </li>
+
+          {/* Card 4: Blockchain and FinTech */}
           <li className="rounded-2xl border border-gray-200 p-8">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              strokeWidth="1.5"
-              stroke="currentColor"
-              className="size-8"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M8.25 18.75a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0m3 0h6m-9 0H3.375a1.125 1.125 0 0 1-1.125-1.125V14.25m17.25 4.5a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0m3 0h1.125c.621 0 1.129-.504 1.09-1.124a17.902 17.902 0 0 0-3.213-9.193 2.056 2.056 0 0 0-1.58-.86H14.25M16.5 18.75h-2.25m0-11.177v-.958c0-.568-.422-1.048-.987-1.106a48.554 48.554 0 0 0-10.026 0 1.106 1.106 0 0 0-.987 1.106v7.635m12-6.677v6.677m0 4.5v-4.5m0 0h-12"
-              />
-            </svg>
+            <TbLock size={40} className="text-gray-600" />
             <h3 className="mt-6 font-semibold text-gray-900">
-              Object-Oriented Programming Principles
+              Blockchain and FinTech
             </h3>
             <p className="mt-2 text-gray-700">
-              Strengthen your programming skills by understanding OOP principles
-              like inheritance, encapsulation, and polymorphism, essential for
-              modern software development.
+              Explore the transformative power of blockchain technology.
+              Understand decentralized finance and learn to create smart
+              contracts on platforms like Ethereum.
             </p>
           </li>
+
+          {/* Card 5: Web Development */}
           <li className="rounded-2xl border border-gray-200 p-8">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              strokeWidth="1.5"
-              stroke="currentColor"
-              className="size-8"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M13.5 21v-7.5a.75.75 0 0 1 .75-.75h3a.75.75 0 0 1 .75.75V21m-4.5 0H2.36m11.14 0H18m0 0h3.64m-1.39 0V9.349M3.75 21V9.349m0 0a3.001 3.001 0 0 0 3.75-.615A2.993 2.993 0 0 0 9.75 9.75c.896 0 1.7-.393 2.25-1.016a2.993 2.993 0 0 0 2.25 1.016c.896 0 1.7-.393 2.25-1.015a3.001 3.001 0 0 0 3.75.614m-16.5 0a3.004 3.004 0 0 1-.621-4.72l1.189-1.19A1.5 1.5 0 0 1 5.378 3h13.243a1.5 1.5 0 0 1 1.06.44l1.19 1.189a3 3 0 0 1-.621 4.72M6.75 18h3.75a.75.75 0 0 0 .75-.75V13.5a.75.75 0 0 0-.75-.75H6.75a.75.75 0 0 0-.75.75v3.75c0 .414.336.75.75.75Z"
-              />
-            </svg>
+            <FaLaptopCode size={40} className="text-gray-600" />
             <h3 className="mt-6 font-semibold text-gray-900">
-              Software Architecture and Design Patterns
+              Web Development
             </h3>
             <p className="mt-2 text-gray-700">
-              Learn to design scalable and maintainable software systems, using
-              popular design patterns and principles that are key in building
-              robust applications.
+              Gain hands-on experience with web technologies such as HTML, CSS,
+              and JavaScript. Learn how to build dynamic, responsive websites
+              and deploy them online.
+            </p>
+          </li>
+
+          {/* Card 6: Cybersecurity */}
+          <li className="rounded-2xl border border-gray-200 p-8">
+            <FaShieldAlt size={40} className="text-gray-600" />
+            <h3 className="mt-6 font-semibold text-gray-900">Cybersecurity</h3>
+            <p className="mt-2 text-gray-700">
+              Get introduced to the fundamentals of cybersecurity, including how
+              to secure web applications, data, and networks from online threats
+              and attacks.
             </p>
           </li>
         </ul>
