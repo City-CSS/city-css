@@ -51,7 +51,7 @@ export function FileTreeDemo() {
                   </File>
                   <File value="4">
                     <p className="pl-6 whitespace-nowrap">
-                      Session 4: Let's write some code
+                      Session 4: Lets write some code
                     </p>
                   </File>
                 </Folder>

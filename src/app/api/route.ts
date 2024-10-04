@@ -3,23 +3,36 @@ import { NextRequest } from "next/server";
 import { Client } from "pg";
 
 interface RequestBody {
-  name: string; // Include name field
+  name: string;
   email: string;
 }
 
 export async function POST(request: NextRequest) {
-  // Initialize PostgreSQL client inside the function
   const client = new Client({
-    connectionString: process.env.POSTGRES_URL, // Use environment variable for connection string
+    connectionString: process.env.POSTGRES_URL,
   });
 
   try {
-    await client.connect(); // Connect to the database
+    await client.connect();
 
     // Parse the request body to extract name and email
     const { name, email }: RequestBody = await request.json();
 
-    // Check if email already exists
+    // Check the current number of sign-ups
+    const countResult = await client.query("SELECT COUNT(*) FROM message");
+    const signupCount = parseInt(countResult.rows[0].count, 10);
+
+    // If the number of sign-ups is already 90, reject the request
+    if (signupCount >= 90) {
+      return NextResponse.json(
+        {
+          message: "The waiting list is full. No more sign-ups are allowed.",
+        },
+        { status: 403 }, // Forbidden
+      );
+    }
+
+    // Check if the email already exists
     const result = await client.query(
       "SELECT email FROM message WHERE email = $1",
       [email],
@@ -45,10 +58,7 @@ export async function POST(request: NextRequest) {
       message: `Email ${email} has been successfully added to the waiting list!`,
     });
   } catch (error) {
-    // Log the error to help with debugging
     console.error("Error during POST request:", error);
-
-    // Return error message with status code 500
     return NextResponse.json(
       {
         message: "An error occurred. Please try again.",
