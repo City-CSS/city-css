@@ -1,172 +1,217 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
+import Image from "next/image";
+import {
+  Dialog,
+  DialogPanel,
+  Disclosure,
+  DisclosureButton,
+  DisclosurePanel,
+  Popover,
+  PopoverButton,
+  PopoverGroup,
+  PopoverPanel,
+} from "@headlessui/react";
+import {
+  ArrowPathIcon,
+  CodeBracketIcon,
+  Bars3Icon,
+  ChartPieIcon,
+  CursorArrowRaysIcon,
+  FingerPrintIcon,
+  SquaresPlusIcon,
+  XMarkIcon,
+  GlobeAltIcon,
+  UserIcon,
+  CurrencyDollarIcon,
+} from "@heroicons/react/24/outline";
+
+import {
+  ChevronDownIcon,
+  PhoneIcon,
+  PlayCircleIcon,
+} from "@heroicons/react/20/solid";
+import Logo from "../assets/logos.png";
+const products = [
+  {
+    name: "Git Sessions",
+    description: "Learn basics of git and version control",
+    href: "/se",
+    icon: CodeBracketIcon,
+  },
+  {
+    name: "AI & ML",
+    description: "Get rolling and stay on top of the market",
+    href: "#",
+    icon: GlobeAltIcon,
+  },
+  {
+    name: "BLockchain",
+    description: "The true technology behind the blockchain",
+    href: "#",
+    icon: CurrencyDollarIcon,
+  },
+  {
+    name: "Interview preparation",
+    description: "Ace interviews for internships and much more",
+    href: "#",
+    icon: UserIcon,
+  },
+];
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const scrollThreshold = window.matchMedia("(min-width: 768px)").matches
-        ? 150
-        : 50;
-
-      if (window.scrollY > scrollThreshold) {
-        setScrolled(true);
-      } else {
-        setScrolled(false);
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
 
   return (
-    <header
-      className={`sticky top-0 z-50 py-6 transition ${
-        scrolled ? "bg-white shadow-md" : "bg-transparent"
-      }`}
-    >
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <nav className="relative z-50 flex justify-between">
-          <div className="flex items-center md:gap-x-12">
-            <a aria-label="Home" href="#"></a>
+    <header className="bg-white z-50 sticky top-0 shadow-sm">
+      <nav
+        aria-label="Global"
+        className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8"
+      >
+        <div className="flex lg:flex-1">
+          <a href="/" className="-m-1.5 p-1.5">
+            <span className="sr-only">Your Company</span>
+            <Image alt="" src={Logo} className="h-10 w-10" />
+          </a>
+        </div>
+        <div className="flex lg:hidden">
+          <button
+            type="button"
+            onClick={() => setMobileMenuOpen(true)}
+            className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
+          >
+            <span className="sr-only">Open main menu</span>
+            <Bars3Icon aria-hidden="true" className="h-6 w-6" />
+          </button>
+        </div>
+        <PopoverGroup className="hidden lg:flex lg:gap-x-12">
+          <Popover className="relative">
+            <PopoverButton className="flex items-center gap-x-1 text-sm font-semibold leading-6 text-gray-900">
+              Sessions
+              <ChevronDownIcon
+                aria-hidden="true"
+                className="h-5 w-5 flex-none text-gray-400"
+              />
+            </PopoverButton>
 
-            <div className="hidden md:flex md:gap-x-6">
-              <a
-                className="inline-block rounded-lg px-2 py-1 text-sm text-slate-700 hover:bg-slate-100 hover:text-slate-900"
-                href="#features"
-              >
-                Hello
-              </a>
-              <a
-                className="inline-block rounded-lg px-2 py-1 text-sm text-slate-700 hover:bg-slate-100 hover:text-slate-900"
-                href="#testimonials"
-              >
-                Hello
-              </a>
-              <a
-                className="inline-block rounded-lg px-2 py-1 text-sm text-slate-700 hover:bg-slate-100 hover:text-slate-900"
-                href="/about"
-              >
-                Hello
-              </a>
-              <a
-                className="inline-block rounded-lg px-2 py-1 text-sm text-slate-700 hover:bg-slate-100 hover:text-slate-900"
-                href="#pricing"
-              >
-                Hello
-              </a>
-            </div>
-          </div>
-          <div className="flex items-center gap-x-5 md:gap-x-8">
-            <div className="hidden md:block lg:block">
-              <a
-                className="group inline-flex items-center justify-center rounded-full py-2 px-4 text-sm font-semibold bg-[#0917bc] text-white active:bg-blue-800 active:text-blue-100"
-                href="/contact"
-              >
-                <span>Hello</span>
-              </a>
-            </div>
-
-            <div className="-mr-1 md:hidden">
-              <div>
-                <button
-                  className="relative z-10 flex h-8 w-8 items-center justify-center ui-not-focus-visible:outline-none"
-                  aria-label="Toggle Navigation"
-                  type="button"
-                  aria-expanded={mobileMenuOpen}
-                  onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                >
-                  <svg
-                    aria-hidden="true"
-                    className="h-3.5 w-3.5 overflow-visible stroke-slate-700"
-                    fill="none"
-                    strokeWidth="2"
-                    strokeLinecap="round"
+            <PopoverPanel
+              transition
+              className="absolute -left-8 top-full z-10 mt-3 w-screen max-w-md overflow-hidden rounded-3xl bg-white shadow-lg ring-1 ring-gray-900/5 transition data-[closed]:translate-y-1 data-[closed]:opacity-0 data-[enter]:duration-200 data-[leave]:duration-150 data-[enter]:ease-out data-[leave]:ease-in"
+            >
+              <div className="p-4">
+                {products.map((item) => (
+                  <div
+                    key={item.name}
+                    className="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-gray-50"
                   >
-                    <path
-                      d="M0 1H14M0 7H14M0 13H14"
-                      className={`origin-center transition ${
-                        mobileMenuOpen ? "opacity-0" : ""
-                      }`}
-                    ></path>
-                    <path
-                      d="M2 2L12 12M12 2L2 12"
-                      className={`origin-center transition scale-90 ${
-                        mobileMenuOpen ? "opacity-100" : "opacity-0"
-                      }`}
-                    ></path>
-                  </svg>
-                </button>
-              </div>
-              <div
-                hidden={!mobileMenuOpen}
-                className="absolute top-10 inset-x-0 p-2 transition transform origin-top-right md:hidden"
-              >
-                <div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 bg-white divide-y-2 divide-gray-50">
-                  <div className="px-5 pt-5 pb-6">
-                    <div className="flex items-center justify-between">
-                      <div></div>
-                      <div className="-mr-2">
-                        <button
-                          type="button"
-                          className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500"
-                          onClick={() => setMobileMenuOpen(false)}
-                        >
-                          <span className="sr-only">Close menu</span>
-                          <svg
-                            className="h-6 w-6"
-                            xmlns="http://www.w3.org/2000/svg"
-                            fill="none"
-                            viewBox="0 0 24 24"
-                            stroke="currentColor"
-                            aria-hidden="true"
-                          >
-                            <path
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                              strokeWidth="2"
-                              d="M6 18L18 6M6 6l12 12"
-                            />
-                          </svg>
-                        </button>
-                      </div>
+                    <div className="flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
+                      <item.icon
+                        aria-hidden="true"
+                        className="h-6 w-6 text-gray-600 group-hover:text-indigo-600"
+                      />
                     </div>
-                    <div className="mt-6">
-                      <nav className="grid gap-y-8">
-                        <a
-                          href="#features"
-                          className="text-base font-medium text-gray-900 hover:text-gray-700"
-                        >
-                          Hello
-                        </a>
-                        <a
-                          href="#testimonials"
-                          className="text-base font-medium text-gray-900 hover:text-gray-700"
-                        >
-                          Hello
-                        </a>
-                        <a
-                          href="#pricing"
-                          className="text-base font-medium text-gray-900 hover:text-gray-700"
-                        >
-                          Hello
-                        </a>
-                      </nav>
+                    <div className="flex-auto">
+                      <a
+                        href={item.href}
+                        className="block font-semibold text-gray-900"
+                      >
+                        {item.name}
+                        <span className="absolute inset-0" />
+                      </a>
+                      <p className="mt-1 text-gray-600">{item.description}</p>
                     </div>
                   </div>
-                </div>
+                ))}
+              </div>
+              <div className="grid grid-cols-2 divide-x divide-gray-900/5 bg-gray-50"></div>
+            </PopoverPanel>
+          </Popover>
+
+          <a href="#" className="text-sm font-semibold leading-6 text-gray-900">
+            About us{" "}
+          </a>
+          <a
+            href="/internships"
+            className="text-sm font-semibold leading-6 text-gray-900"
+          >
+            Internships
+          </a>
+          <a href="#" className="text-sm font-semibold leading-6 text-gray-900">
+            Collaborations
+          </a>
+        </PopoverGroup>
+        <div className="hidden lg:flex lg:flex-1 lg:justify-end"></div>
+      </nav>
+      <Dialog
+        open={mobileMenuOpen}
+        onClose={setMobileMenuOpen}
+        className="lg:hidden"
+      >
+        <div className="fixed inset-0 z-10" />
+        <DialogPanel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+          <div className="flex items-center justify-between">
+            <a href="#" className="-m-1.5 p-1.5">
+              <span className="sr-only">Your Company</span>
+              <img
+                alt=""
+                src="https://tailwindui.com/plus/img/logos/mark.svg?color=indigo&shade=600"
+                className="h-8 w-auto"
+              />
+            </a>
+            <button
+              type="button"
+              onClick={() => setMobileMenuOpen(false)}
+              className="-m-2.5 rounded-md p-2.5 text-gray-700"
+            >
+              <span className="sr-only">Close menu</span>
+              <XMarkIcon aria-hidden="true" className="h-6 w-6" />
+            </button>
+          </div>
+          <div className="mt-6 flow-root">
+            <div className="-my-6 divide-y divide-gray-500/10">
+              <div className="space-y-2 py-6">
+                <Disclosure as="div" className="-mx-3">
+                  <DisclosureButton className="group flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">
+                    Product
+                    <ChevronDownIcon
+                      aria-hidden="true"
+                      className="h-5 w-5 flex-none group-data-[open]:rotate-180"
+                    />
+                  </DisclosureButton>
+                  <DisclosurePanel className="mt-2 space-y-2"></DisclosurePanel>
+                </Disclosure>
+                <a
+                  href="#"
+                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                >
+                  Features
+                </a>
+                <a
+                  href="#"
+                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                >
+                  Marketplace
+                </a>
+                <a
+                  href="#"
+                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                >
+                  Company
+                </a>
+              </div>
+              <div className="py-6">
+                <a
+                  href="#"
+                  className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                >
+                  Log in
+                </a>
               </div>
             </div>
           </div>
-        </nav>
-      </div>
+        </DialogPanel>
+      </Dialog>
     </header>
   );
 }
