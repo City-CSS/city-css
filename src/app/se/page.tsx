@@ -1,5 +1,5 @@
 import React from "react";
-
+import Header from "../../components/Header";
 const sessions = [
   {
     title: "Session 1: Introduction to Git and Version Control",
@@ -49,91 +49,94 @@ const sessions = [
 
 export default function GitPage() {
   return (
-    <div className="max-w-3xl mx-auto p-8 bg-white rounded-lg shadow-md">
-      <h1 className="text-5xl font-bold mb-6 text-gray-800">Git Sessions</h1>
+    <div>
+      <Header />
+      <div className="max-w-3xl mx-auto p-8 bg-white rounded-lg shadow-md">
+        <h1 className="text-5xl font-bold mb-6 text-gray-800">Git Sessions</h1>
 
-      <h2 className="text-3xl font-semibold mb-4 text-gray-700">
-        Table of Contents
-      </h2>
-      <ul className="list-disc list-inside mb-8">
+        <h2 className="text-3xl font-semibold mb-4 text-gray-700">
+          Table of Contents
+        </h2>
+        <ul className="list-disc list-inside mb-8">
+          {sessions.map((session, index) => (
+            <li key={index} className="mb-2">
+              <a
+                href={`#session-${index}`}
+                className="text-blue-600 hover:underline"
+              >
+                {session.title}
+              </a>
+            </li>
+          ))}
+        </ul>
+
+        <h2 className="text-3xl font-semibold mb-4 text-gray-700">
+          Session Content
+        </h2>
         {sessions.map((session, index) => (
-          <li key={index} className="mb-2">
+          <div key={index} id={`session-${index}`} className="mb-8">
+            <h3 className="text-xl font-semibold text-gray-800 mb-2">
+              {session.title}
+            </h3>
+
+            <p className="mb-2">
+              <a
+                href={session.notionLink}
+                className="text-gray-600 hover:underline"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Notion Page
+              </a>
+            </p>
+            {session.content ? (
+              <div className="mt-2 text-gray-700">{session.content}</div>
+            ) : (
+              <p className="text-gray-700">{session.description}</p>
+            )}
+          </div>
+        ))}
+
+        <h2 className="text-xl font-semibold mb-4 text-gray-700">Resources</h2>
+        <ul className="list-disc list-inside mb-8">
+          <li className="mb-2">
             <a
-              href={`#session-${index}`}
+              href="https://github.com/git-guides"
               className="text-blue-600 hover:underline"
             >
-              {session.title}
+              Git Guides
             </a>
           </li>
-        ))}
-      </ul>
-
-      <h2 className="text-3xl font-semibold mb-4 text-gray-700">
-        Session Content
-      </h2>
-      {sessions.map((session, index) => (
-        <div key={index} id={`session-${index}`} className="mb-8">
-          <h3 className="text-xl font-semibold text-gray-800 mb-2">
-            {session.title}
-          </h3>
-
-          <p className="mb-2">
+          <li>
             <a
-              href={session.notionLink}
-              className="text-gray-600 hover:underline"
-              target="_blank"
-              rel="noopener noreferrer"
+              href="https://www.atlassian.com/git/tutorials"
+              className="text-blue-600 hover:underline"
             >
-              Notion Page
+              Atlassian Git Tutorials
             </a>
-          </p>
-          {session.content ? (
-            <div className="mt-2 text-gray-700">{session.content}</div>
-          ) : (
-            <p className="text-gray-700">{session.description}</p>
-          )}
-        </div>
-      ))}
+          </li>
+        </ul>
 
-      <h2 className="text-xl font-semibold mb-4 text-gray-700">Resources</h2>
-      <ul className="list-disc list-inside mb-8">
-        <li className="mb-2">
+        <h2 className="text-xl font-semibold mb-4 text-gray-700">
+          Additional Links
+        </h2>
+        <p className="mb-2">
           <a
-            href="https://github.com/git-guides"
+            href="https://your-notion-page-link"
             className="text-blue-600 hover:underline"
           >
-            Git Guides
+            Notion Page
           </a>
-        </li>
-        <li>
+        </p>
+        <p>
           <a
-            href="https://www.atlassian.com/git/tutorials"
+            href="https://your-slides-link"
             className="text-blue-600 hover:underline"
           >
-            Atlassian Git Tutorials
+            Slides
           </a>
-        </li>
-      </ul>
-
-      <h2 className="text-xl font-semibold mb-4 text-gray-700">
-        Additional Links
-      </h2>
-      <p className="mb-2">
-        <a
-          href="https://your-notion-page-link"
-          className="text-blue-600 hover:underline"
-        >
-          Notion Page
-        </a>
-      </p>
-      <p>
-        <a
-          href="https://your-slides-link"
-          className="text-blue-600 hover:underline"
-        >
-          Slides
-        </a>
-      </p>
+        </p>
+      </div>
     </div>
   );
 }

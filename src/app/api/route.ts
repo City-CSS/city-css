@@ -5,6 +5,12 @@ import { Client } from "pg";
 interface RequestBody {
   name: string;
   email: string;
+  year: string;
+  lookingForTeam: boolean;
+  interest: string;
+  hasExperience: boolean;
+  experienceDetails: string;
+  selectedWorkAreas: string[];
 }
 
 export async function POST(request: NextRequest) {
@@ -15,26 +21,33 @@ export async function POST(request: NextRequest) {
   try {
     await client.connect();
 
-    // Parse the request body to extract name and email
-    const { name, email }: RequestBody = await request.json();
+    const {
+      name,
+      email,
+      year,
+      lookingForTeam,
+      interest,
+      hasExperience,
+      experienceDetails,
+      selectedWorkAreas,
+    }: RequestBody = await request.json();
 
-    // Check the current number of sign-ups
-    const countResult = await client.query("SELECT COUNT(*) FROM message");
+    const countResult = await client.query(
+      "SELECT COUNT(*) FROM registration_interest",
+    );
     const signupCount = parseInt(countResult.rows[0].count, 10);
 
-    // If the number of sign-ups is already 90, reject the request
     if (signupCount >= 90) {
       return NextResponse.json(
         {
           message: "The waiting list is full. No more sign-ups are allowed.",
         },
-        { status: 403 }, // Forbidden
+        { status: 403 },
       );
     }
 
-    // Check if the email already exists
     const result = await client.query(
-      "SELECT email FROM message WHERE email = $1",
+      "SELECT email FROM registration_interest WHERE email = $1",
       [email],
     );
 
@@ -43,17 +56,27 @@ export async function POST(request: NextRequest) {
         {
           message: `Email ${email} is already on the waiting list.`,
         },
-        { status: 409 }, // Conflict
+        { status: 409 },
       );
     }
 
-    // Insert the name and email into the database
-    await client.query("INSERT INTO message (name, email) VALUES ($1, $2)", [
-      name,
-      email,
-    ]);
+    // Store the selected work areas as a comma-separated string
+    const workAreas = selectedWorkAreas.join(", ");
 
-    // Construct the response
+    await client.query(
+      "INSERT INTO registration_interest (name, email, year, looking_for_team, interest, has_experience, experience_details, work_areas) VALUES ($1, $2, $3, $4, $5, $6, $7, $8)",
+      [
+        name,
+        email,
+        year,
+        lookingForTeam,
+        interest,
+        hasExperience,
+        experienceDetails,
+        workAreas,
+      ],
+    );
+
     return NextResponse.json({
       message: `Email ${email} has been successfully added to the waiting list!`,
     });
@@ -66,7 +89,6 @@ export async function POST(request: NextRequest) {
       { status: 500 },
     );
   } finally {
-    // Ensure the database connection is closed
     await client.end();
   }
 }
