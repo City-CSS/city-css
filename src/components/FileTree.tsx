@@ -56,11 +56,20 @@ export function FileTreeDemo() {
                   </Folder>
                   <Folder value="5" element="AI & ML">
                     <File value="7">
-                      <p className="pl-6">Coming soon :)</p>
+                      <p className="pl-6">Session 1: The Basics</p>
+                    </File>
+                   <File value="8">
+                      <p className="pl-6">Session 2: Decision Trees</p>
+                    </File>
+                     <File value="9">
+                      <p className="pl-6">Session 3: KNN and SVM</p>
+                    </File>
+                     <File value="10">
+                      <p className="pl-6">Session 4: Clustering</p>
                     </File>
                   </Folder>
-                  <Folder value="10" element="BlockChain">
-                    <File value="11">
+                  <Folder value="11" element="BlockChain">
+                    <File value="12">
                       <p className="pl-6">Coming soon :)</p>
                     </File>
                   </Folder>
