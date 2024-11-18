@@ -16,14 +16,10 @@ Being a good people:
     Be a team player. Means collaboration and communication,
 
 Being a good engineer:
-
-    Write good commits. A good commit is a commit that can be read by a human and understand what is the purpose of the commit, it should involve only one feature or bug fix in order to be easily reverted or cherry-picked or understood. Read this article and this one
-
-    Write good RFCs or ADRs. Those are documents that explain the reason behind a decision. It is important to write them because they are a way to share knowledge, to make the decision process transparent and involve all people. More info here
-
-    Choose right tools. Don't mean always pick the latest tool or language but also don't stuck on outdated frameworks or languages. Choose the right tool for the right job. Best effort between consistency with our stack, innovation and best for the job.
-
-    Documentation firts. If you introduce new tools, new command, different way to do things, write it down. It is important to have a good documentation to help new people to onboard and to help the team to remember how to do things.
+ Write good commits. A good commit is a commit that can be read by a human and understand what is the purpose of the commit, it should involve only one feature or bug fix in order to be easily reverted or cherry-picked or understood. Read this article and this one
+Write good RFCs or ADRs. Those are documents that explain the reason behind a decision. It is important to write them because they are a way to share knowledge, to make the decision process transparent and involve all people. More info here
+Choose right tools. Don't mean always pick the latest tool or language but also don't stuck on outdated frameworks or languages. Choose the right tool for the right job. Best effort between consistency with our stack, innovation and best for the job.
+Documentation firts. If you introduce new tools, new command, different way to do things, write it down. It is important to have a good documentation to help new people to onboard and to help the team to remember how to do things.
 
 # How to Contribute to the CSS Website Project
 
