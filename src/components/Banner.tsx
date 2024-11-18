@@ -1,5 +1,6 @@
 export default function Banner() {
   return (
+    // banner
     <section
       id="get-started-today"
       className="relative overflow-hidden bg-red-500 py-24 bg-gradient-to-r from-[#a73737] to-[#7a2828]"
