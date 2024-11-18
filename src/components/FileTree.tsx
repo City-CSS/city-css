@@ -28,9 +28,9 @@ export function FileTreeDemo() {
         </div>
         <div className="flex justify-center mt-8 w-full">
           {/* Added an explicit width for the Tree container */}
-          <div className="overflow-x-auto">
+          <div className="overflow-x-auto mx-auto">
             <Tree
-              className="p-4 border border-gray-300 rounded-lg w-[600px] min-w-[600px]"
+              className="p-4 border border-gray-300 rounded-lg w-[600px]"
               initialExpandedItems={["1", "2", "5", "6", "10"]}
               elements={ELEMENTS}
             >
