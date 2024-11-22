@@ -1,6 +1,8 @@
 ## City Computer Science Society Website 
 Here you will find all tech stack of `CSS website`.
 
+### General setup
+
 ## Tech Stack 
 For this project we are using NextJS, Tailwind and React
 
