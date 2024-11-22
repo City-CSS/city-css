@@ -1,7 +1,9 @@
-## City Computer Science Society Website 
+## City Computer Science Society Website
+
 Here you will find all tech stack of `CSS website`.
 
-## Tech Stack 
+## Tech Stack
+
 For this project we are using NextJS, Tailwind and React
 
 ## Engineering principles
@@ -16,9 +18,15 @@ Being a good people:
     Be a team player. Means collaboration and communication,
 
 Being a good engineer:
- Write good commits. A good commit is a commit that can be read by a human and understand what is the purpose of the commit, it should involve only one feature or bug fix in order to be easily reverted or cherry-picked or understood. Read this article and this one
+Write good commits.
+
+A good commit is a commit that can be read by a human and understand what is the purpose of the commit, it should involve only one feature or bug fix in order to be easily reverted or cherry-picked or understood. Read this article and this one
+
 Write good RFCs or ADRs. Those are documents that explain the reason behind a decision. It is important to write them because they are a way to share knowledge, to make the decision process transparent and involve all people. More info here
-Choose right tools. Don't mean always pick the latest tool or language but also don't stuck on outdated frameworks or languages. Choose the right tool for the right job. Best effort between consistency with our stack, innovation and best for the job.
+Choose right tools.
+
+Don't mean always pick the latest tool or language but also don't stuck on outdated frameworks or languages. Choose the right tool for the right job. Best effort between consistency with our stack, innovation and best for the job.
+
 Documentation firts. If you introduce new tools, new command, different way to do things, write it down. It is important to have a good documentation to help new people to onboard and to help the team to remember how to do things.
 
 # How to Contribute to the CSS Website Project
@@ -31,18 +39,21 @@ We appreciate your interest in contributing to the City Computer Science Society
 
 1. **Basic Knowledge**  
    Ensure familiarity with our tech stack:
+
    - **Next.js**: React-based framework for server-side rendering and static site generation.
    - **Tailwind CSS**: Utility-first CSS framework for styling.
    - **React**: For component-based UI development.
 
 2. **Tools and Environment**  
    Install the following tools on your local machine:
+
    - Node.js (LTS version recommended)
    - Git
    - Code editor (VS Code is preferred)
 
 3. **Clone the Repository**  
    Fork the repository on GitHub, then clone your fork locally:
+
    ```bash
    git clone https://github.com/YOUR_USERNAME/css-website.git
    cd css-website
@@ -50,6 +61,7 @@ We appreciate your interest in contributing to the City Computer Science Society
 
 4. **Install Dependencies**  
    Run the following command to install project dependencies:
+
    ```bash
    npm install
    ```
@@ -67,15 +79,18 @@ We appreciate your interest in contributing to the City Computer Science Society
 
 1. **Create a Branch**  
    Use a new branch for your changes. Follow this naming convention:
+
    - **feature/your-feature-name** for new features
    - **fix/bug-description** for bug fixes
    - **docs/your-docs-update** for documentation updates
+
    ```bash
    git checkout -b feature/add-new-section
    ```
 
 2. **Make Changes**  
    Implement your feature or fix. Ensure your code adheres to our principles:
+
    - **Readable Commits**: Write clear and concise commit messages.
    - **Documentation**: Update relevant documentation if introducing new tools or workflows.
 
@@ -84,6 +99,7 @@ We appreciate your interest in contributing to the City Computer Science Society
 
 4. **Commit Your Work**  
    Write meaningful commit messages describing your changes:
+
    ```bash
    git add .
    git commit -m "Add new feature: user profile section"
@@ -91,11 +107,12 @@ We appreciate your interest in contributing to the City Computer Science Society
 
 5. **Push Changes to GitHub**  
    Push your branch to your forked repository:
+
    ```bash
    git push origin feature/add-new-section
    ```
 
-6. **Create a Pull Request (PR)**  
+6. **Create a Pull Request (PR)**
    - Navigate to the main repository on GitHub.
    - Click **New Pull Request**.
    - Provide a detailed description of your changes and link any relevant issues.
@@ -135,4 +152,3 @@ We appreciate your interest in contributing to the City Computer Science Society
 ---
 
 Thank you for contributing to the CSS website project! Together, we can build an amazing platform.
-
