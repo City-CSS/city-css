@@ -2,8 +2,10 @@
 
 Here you will find all tech stack of `CSS website`.
 
-## Tech Stack
 
+### General setup
+
+## Tech Stack 
 For this project we are using NextJS, Tailwind and React
 
 ## Engineering principles
