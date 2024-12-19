@@ -42,36 +42,44 @@ export default function InternTable() {
   };
 
   return (
-    <div>
-      <div>
+    <div className="mt-2 h-full mx-3">
         <h1>INTERNSHIPS</h1>
+        <div className="border rounded">
         {tableData.length > 0 && (
-          <table>
+          <table className="w-full">
             <thead>
-              <tr>
-                {Object.keys(tableData[0]).map((header, index) => (
-                  <th key={index}>{header}</th>
-                ))}
+              <tr className="border-b bg-blue-100 text-left">
+                {Object.keys(tableData[0])
+                  .filter((r) => r !== "link")
+                  .map((header, index) => (
+                    <th key={index}>{capitalizeFirstLetter(header)}</th>
+                  ))}
               </tr>
             </thead>
             <tbody>
               {tableData.map((row, rowIndex) => (
-                <tr key={rowIndex}>
-                  {Object.keys(row).map((key, colIndex) => (
-                    <td key={colIndex}>
-                      {key === "link" ? (
-                        <a
-                          href={row[key]}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          {row[key]}
-                        </a>
-                      ) : (
-                        row[key]
-                      )}
-                    </td>
-                  ))}
+                <tr
+                  key={rowIndex}
+                  className="odd: bg-white even:bg-gray-50 text-sm border-b"
+                >
+                  {Object.keys(row)
+                    .filter((r) => r !== "link")
+                    .map((key, colIndex) => (
+                      <td key={colIndex} className="py-1">
+                        {key === "title" ? (
+                          <a
+                            href={row["link"]}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="font-medium text-blue-600 underlin hover:no-underline"
+                          >
+                            {row[key]}
+                          </a>
+                        ) : (
+                          row[key]
+                        )}
+                      </td>
+                    ))}
                 </tr>
               ))}
             </tbody>
@@ -80,4 +88,8 @@ export default function InternTable() {
       </div>
     </div>
   );
+}
+
+function capitalizeFirstLetter(val:string):string {
+  return String(val).charAt(0).toUpperCase() + String(val).slice(1);
 }
