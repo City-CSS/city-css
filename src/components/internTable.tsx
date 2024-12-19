@@ -44,7 +44,7 @@ export default function InternTable() {
   return (
     <div className="mt-2 h-full mx-3">
         <h1>INTERNSHIPS</h1>
-        <div className="border rounded mt-2">
+        <div className="border rounded">
         {tableData.length > 0 && (
           <table className="w-full">
             <thead>
