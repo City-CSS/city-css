@@ -1,17 +1,17 @@
 # City Computer Science Society Website
 
-Here you will find all tech stack of `CSS website`.
+Here you will find tech stack of `CSS website`.
 
 ---
 
 ## General setup
 
 ### Tech Stack 
-For this project we use NextJS, Tailwind and React
+For this project we use NextJS, Tailwind, and React
 
 ### Engineering principles
 
-We believe in the excellence of the engineering part of the product. Success in engineering is the result of good practices, good tools and good people. We are always looking for the best tools and practices to improve our work.
+We believe in the excellence of the engineering part of the product. Success in engineering is the result of good practices and good tools. We are always looking for the best tools and practices to improve our work.
 
 
 ---
@@ -30,7 +30,7 @@ We appreciate your interest in contributing to the City Computer Science Society
    - **React**: For component-based UI development.
 
 2. **Tools and Environment**  
-   Install the following tools on your local machine:
+   Install the following software on your local machine:
 
    - Node.js (LTS version recommended)
    - Git
@@ -72,7 +72,7 @@ We appreciate your interest in contributing to the City Computer Science Society
    ```
 
 2. **Make Changes**  
-   Implement your feature or fix. Ensure your code adheres to our principles:
+   Implement your feature or fix. Please make sure your code aligns with our principles:
 
    - **Readable Commits**: Write clear and concise commit messages.
    - **Documentation**: Update relevant documentation if introducing new tools or workflows.
@@ -98,7 +98,7 @@ We appreciate your interest in contributing to the City Computer Science Society
 6. **Create a Pull Request (PR)**
    - Navigate to the main repository on GitHub.
    - Click **New Pull Request**.
-   - Provide a detailed description of your changes and link any relevant issues.
+   - Provide a detailed description of your changes and include links to any relevant issues.
 
 ### Code Style and Practices
 
@@ -112,7 +112,7 @@ We appreciate your interest in contributing to the City Computer Science Society
 ### Review Process
 
 1. **Code Review**  
-   Your PR will be reviewed by a team member. Be open to feedback and iterate on your changes if requested.
+   Your PR will be reviewed by a team member. Be open to feedback and revise your changes if requested.
 
 2. **Testing**  
    Ensure all functionality works as intended. We may run additional tests during the review.
