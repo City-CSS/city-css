@@ -124,7 +124,7 @@ export default function Header() {
               </div>
             </PopoverPanel>
           </Popover>
-          <a href="#" className="text-sm font-semibold leading-6 text-gray-900">
+          <a href="/about-us" className="text-sm font-semibold leading-6 text-gray-900">
             About us
           </a>
           <a href="/internships" className="text-sm font-semibold leading-6 text-gray-900">
