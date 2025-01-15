@@ -2,12 +2,12 @@
 
 import React, { useState } from 'react';
 
-export default function ImageGallery({ images }) {
+export default function ImageGallery({ images }: { images: string[] }) {
     const [currentIndex, setCurrentIndex] = useState(0);
     const totalImages = images.length;
 
     // Function to handle next and previous buttons
-    const handleScroll = (direction) => {
+    const handleScroll = (direction: 'next' | 'prev') => {
         if (direction === 'next') {
             setCurrentIndex((prevIndex) => (prevIndex + 1) % totalImages);
         } else {

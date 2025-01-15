@@ -6,6 +6,11 @@ export default function EventType (
         iconSize = 100,
         title,
         description
+    }: {
+        icon?: React.ComponentType<{ size: number; className?: string }>;
+        iconSize?: number;
+        title: string;
+        description: string;
     }
 ) {
     return (
