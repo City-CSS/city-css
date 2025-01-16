@@ -1,9 +1,9 @@
 import React from "react";
 
-export default function EventType (
+export default function Program (
     {
         icon: Icon,
-        iconSize = 100,
+        iconSize = 175,
         title,
         description
     }: {
@@ -19,7 +19,7 @@ export default function EventType (
                        hover:border-red-500 hover:shadow-lg transition-all duration-300"
         >
             {Icon && <Icon size={iconSize} className="text-gray-600" />}
-            <h3 className="mt-4 font-semibold text-gray-900 text-xl">
+            <h3 className="mt-4 font-semibold text-gray-900 ">
                 {title}
             </h3>
             <p className="mt-2 text-gray-700">

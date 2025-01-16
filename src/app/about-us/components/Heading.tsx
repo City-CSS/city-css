@@ -1,5 +1,5 @@
 export default function Heading(
-    {title}
+    {title} : {title: string}
 ) {
     return (
         // banner
