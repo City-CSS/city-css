@@ -1,14 +1,14 @@
 "use client";
 
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
 export default function ImageGallery({ images }: { images: string[] }) {
     const [currentIndex, setCurrentIndex] = useState(0);
     const totalImages = images.length;
 
     // Function to handle next and previous buttons
-    const handleScroll = (direction: 'next' | 'prev') => {
-        if (direction === 'next') {
+    const handleScroll = (direction: "next" | "prev") => {
+        if (direction === "next") {
             setCurrentIndex((prevIndex) => (prevIndex + 1) % totalImages);
         } else {
             setCurrentIndex((prevIndex) => (prevIndex - 1 + totalImages) % totalImages);
@@ -28,15 +28,15 @@ export default function ImageGallery({ images }: { images: string[] }) {
 
             {/* Navigation Buttons */}
             <button
-                onClick={() => handleScroll('prev')}
-                className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white p-2 rounded-full"
+                onClick={() => handleScroll("prev")}
+                className="absolute left-[-20px] top-1/2 transform -translate-y-1/2 bg-gray-800 text-white p-2 rounded-full"
             >
                 ◀
             </button>
 
             <button
-                onClick={() => handleScroll('next')}
-                className="absolute right-0 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white p-2 rounded-full"
+                onClick={() => handleScroll("next")}
+                className="absolute right-[-20px] top-1/2 transform -translate-y-1/2 bg-gray-800 text-white p-2 rounded-full"
             >
                 ▶
             </button>
@@ -48,8 +48,8 @@ export default function ImageGallery({ images }: { images: string[] }) {
                         key={index}
                         className={`w-8 h-1 rounded-md transition-colors duration-500 ease-in-out ${
                             currentIndex === index
-                                ? 'bg-gray-800' // Active line color
-                                : 'bg-gray-300' // Inactive line color
+                                ? "bg-gray-800" // Active line color
+                                : "bg-gray-300" // Inactive line color
                         }`}
                     ></div>
                 ))}

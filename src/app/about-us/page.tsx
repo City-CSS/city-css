@@ -6,6 +6,7 @@ import Program from "./components/Program";
 import Committee from ".//components/Committee";
 import Event from ".//components/Event";
 import Section from "./components/Section";
+import SponsorForm from "@/components/SponsorForm";
 
 import {
     FaLaptopCode,
@@ -41,12 +42,11 @@ function page() {
         <div>
             <Header/>
 
-
             {/*Our mission section*/}
             <Heading
                 title={"Our mission"}
             />
-            <div className="flex flex-col md:flex-row my-12">
+            <div className="flex flex-col md:flex-row my-16">
                 <div className="w-full md:w-1/2 p-4">
                     <ImageGallery images={gallery_images}/>
                 </div>
@@ -78,11 +78,10 @@ function page() {
                     </p>
                 </div>
             </div>
-
             {/*Our program section*/}
             <Section
                 heading="Our program"
-                gridClasses="md:grid-cols-3 md:max-w-screen-xl md:mx-16 md:my-12 md:gap-10 md:text-lg"
+                gridClasses="md:grid-cols-3 md:max-w-screen-xl md:mx-16 md:my-16 md:gap-10 md:text-lg"
             >
                 <Program
                     icon={FaLaptopCode}
@@ -104,12 +103,15 @@ function page() {
                 />
             </Section>
 
+            <div className="my-16">
+                <SponsorForm/>
+            </div>
 
             {/*Our events section*/}
             <Section
                 heading={"Our events"}
-                gridClasses={"md:grid-cols-3 md:max-w-screen-xl md:gap-6 md:mx-6 md:my-12" +
-                    "lg:max-w-none lg:grid-cols-4 lg:mx-16 lg:my-12 lg:gap-10 lg:text-base"}
+                gridClasses={"md:grid-cols-3 md:max-w-screen-xl md:gap-6 md:mx-6 md:my-16" +
+                    "lg:max-w-none lg:grid-cols-4 lg:mx-16 lg:my-16 lg:gap-10 lg:text-base"}
             >
                 <Event
                     imageSrc={event_images[0]}
@@ -161,11 +163,10 @@ function page() {
                 />
             </Section>
 
-
             {/*Our committee section*/}
             <Section
                 heading={"Our committee"}
-                gridClasses={"md:grid-cols-4 md:max-w-screen-xl md:mx-16 md:my-12 md:gap-10 md:text-base"}
+                gridClasses={"md:grid-cols-4 md:max-w-screen-xl md:mx-16 md:my-16 md:gap-10 md:text-base"}
                 initialGrid={2}
             >
                 <Committee
