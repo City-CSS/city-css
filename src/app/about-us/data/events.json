@@ -1,0 +1,50 @@
+[
+  {
+    "imageSrc": "/about-us/events/industry_talk_angelica.png",
+    "title": "In Conversation with Angelica Ortega",
+    "date": "10th December 2024",
+    "description": "Angelica gave a speech on the details of crafting a winning CV and dived into Start-ups vs Corporates"
+  },
+  {
+    "imageSrc": "/about-us/events/industry_talk_anthony.png",
+    "title": "In Conversation with Anthony Finkelstein",
+    "date": "5th December 2024",
+    "description": "Sir Professor Anthony shared insights on his remarkable career working in the government sector"
+  },
+  {
+    "imageSrc": "/about-us/events/advent_of_code.jpg",
+    "title": "Advent of Code",
+    "date": "1st December 2024",
+    "description": "Advent of Code is an annual programming competition. This year, the society hosted a private leaderboard for City students"
+  },
+  {
+    "imageSrc": "/about-us/events/ai_session.png",
+    "title": "First session of AI & ML module",
+    "date": "20th November 2024",
+    "description": "Karolina gave a talk on the basics of AI & ML and how it can be applied in real-world scenarios"
+  },
+  {
+    "imageSrc": "/about-us/events/industry_talk_wofgang.png",
+    "title": "In Conversation with Wolfgang Emmerich",
+    "date": "14th November 2024",
+    "description": "Wolfgang shared his experience of leading a company that built the Covid-19 App for England and Wales"
+  },
+  {
+    "imageSrc": "/about-us/events/zero_to_hero.png",
+    "title": "React Workshop: Zero to Hero",
+    "date": "14th November 2024",
+    "description": "Filippo gave a workshop on React.js and how it can be used to build a web application"
+  },
+  {
+    "imageSrc": "/about-us/events/se_session.png",
+    "title": "First Session of SE module",
+    "date": "15th October 2024",
+    "description": "Filippo delivered a Software Engineering module where he dived into the git workflow and how to use it effectively"
+  },
+  {
+    "imageSrc": "/about-us/events/welcome_day.png",
+    "title": "Welcome Day",
+    "date": "4th October 2024",
+    "description": "The society hosted a welcome day to get to know each other and introduce the plans for the year ahead"
+  }
+]

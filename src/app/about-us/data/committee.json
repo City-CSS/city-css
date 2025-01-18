@@ -1,0 +1,26 @@
+[
+  {
+    "imageSrc": "/about-us/committee/danylo.jpg",
+    "name": "Danylo Piatyhorets",
+    "role": "President",
+    "linkedInLink": "https://www.linkedin.com/in/danylo-piatyhorets-1bb16b293/"
+  },
+  {
+    "imageSrc": "/about-us/committee/filippo.png",
+    "name": "Filippo Vicini",
+    "role": "Vice President | Tech Officer",
+    "linkedInLink": "https://www.linkedin.com/in/filippo-vicini-6ab35921a/"
+  },
+  {
+    "imageSrc": "/about-us/committee/aisari.jpeg",
+    "name": "Aisari Amirov",
+    "role": "Communication Officer",
+    "linkedInLink": "https://www.linkedin.com/in/aisari-amirov-837164294/"
+  },
+  {
+    "imageSrc": "/about-us/committee/karolina.png",
+    "name": "Karolina Wasnik",
+    "role": "Finance & Event Officer",
+    "linkedInLink": "https://www.linkedin.com/in/karolina-wasnik/"
+  }
+]
