@@ -5,13 +5,13 @@ import { XMarkIcon } from "@heroicons/react/20/solid";
 
 export default function TopBanner(
     {
-        title,
-        description,
-        link
+        title="AI & ML Sessions!",
+        description="Explore the materials of our AI & ML module",
+        link="/ai-ml"
     } : {
-        title: string,
-        description: string,
-        link: string
+        title?: string,
+        description?: string,
+        link?: string
     }
 
 ) {

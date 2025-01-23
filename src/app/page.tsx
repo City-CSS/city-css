@@ -11,11 +11,7 @@ import LogoCollabs from "@/components/logoCollabs";
 export default function Home() {
   return (
     <>
-        <TopBanner
-            title="AI & ML Sessions!"
-            description="Explore the materials of our AI & ML module"
-            link="/ai-ml"
-        />
+        <TopBanner/>
       <Header />
       <HeroSection />
       <JoinForm />
