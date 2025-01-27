@@ -7,7 +7,6 @@ import { IconCloudDemo } from "@/components/IconCloudDemo";
 import Footer from "@/components/Footer";
 import { FileTreeDemo } from "@/components/FileTree";
 import TopBanner from "@/components/TopBanner";
-import LogoCollabs from "@/components/logoCollabs";
 export default function Home() {
   return (
     <>
@@ -18,7 +17,9 @@ export default function Home() {
       <FileTreeDemo />
 
       <IconCloudDemo />
-      <SponsorForm />
+      <SponsorForm
+          colour={"red"}
+      />
       <Usage />
       <Footer />
     </>

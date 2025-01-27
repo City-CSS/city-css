@@ -93,9 +93,10 @@ function page() {
                     description="Entertaining events for students to connect with peers and have fun"
                 />
             </Section>
-            <div className="my-16">
-                <SponsorForm/>
-            </div>
+
+            <SponsorForm
+                colour={"white"}
+            />
 
             {/*Our events section*/}
             <Section

@@ -3,26 +3,50 @@
 import React, { useState } from 'react';
 
 // --- BANNER ---
-export default function Banner() {
+export default function Banner(
+    {colour} : {colour : string}
+) {
   const [isFormOpen, setIsFormOpen] = useState(false);
+  // colour configuration
+  const colourConfig = {
+    red: {
+      background: "bg-red-500 bg-gradient-to-r from-[#a73737] to-[#7a2828]",
+      text: "text-white",
+      button: "bg-white text-slate-900 hover:bg-blue-50 active:bg-blue-200 active:text-slate-600 focus-visible:outline-white",
+    },
+    white: {
+      background: " ",
+      text: "text-slate-900",
+      button: "bg-gray-900 text-white hover:bg-gray-700 focus-visible:outline-gray-900",
+    }
+  };
+  type ColorConfig = {
+    background: string;
+    text: string;
+    button: string;
+  };
+  // @ts-ignore
+  const styles: ColorConfig = colourConfig[colour];
 
   return (
     <section
       id="get-started-today"
-      className="relative overflow-hidden bg-red-500 py-24 bg-gradient-to-r from-[#a73737] to-[#7a2828]"
+      className={`relative overflow-hidden py-24 ${styles.background}`}
     >
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-lg text-center">
-          <h2 className="font-display text-4xl tracking-tight text-white font-semibold sm:text-5xl">
+          <h2 className={`font-display text-4xl tracking-tight ${styles.text} font-semibold sm:text-5xl`}>
             Want to collaborate?
           </h2>
-          <p className="mt-4 text-lg tracking-tight text-white">
+          <p className={`mt-4 text-lg tracking-tight ${styles.text}`}>
             Power a community of tech enthusiasts by becoming a sponsor. 
             Fuel innovation, skills, and spark shared success.
           </p>
           <button
             onClick={() => setIsFormOpen(true)}
-            className="group inline-flex items-center justify-center rounded-full py-2 px-4 text-sm font-semibold focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2 bg-white text-slate-900 hover:bg-blue-50 active:bg-blue-200 active:text-slate-600 focus-visible:outline-white mt-10"
+            className={`group inline-flex items-center justify-center rounded-full py-2 px-4 text-sm
+            font-semibold focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2 mt-10
+            ${styles.button}`}
           >
             Get In Touch 
           </button>
