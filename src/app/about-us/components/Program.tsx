@@ -3,7 +3,7 @@ import React from "react";
 export default function Program (
     {
         icon: Icon,
-        iconSize = 175,
+        iconSize = 125,
         title,
         description
     }: {
