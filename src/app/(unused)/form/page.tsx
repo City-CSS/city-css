@@ -1,7 +1,7 @@
 "use client";
 import { useState, FormEvent } from "react";
 import Image from "next/image";
-import logo from "../../assets/cube.png";
+import logo from "../../../assets/cube.png";
 
 export default function Home() {
   const [email, setEmail] = useState<string>("");
