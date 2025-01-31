@@ -3,7 +3,7 @@ import { FaComments, FaFilePdf } from "react-icons/fa";
 import { cn } from "@/lib/utils";
 import AnimatedGridPattern from "@/components/magicui/animated-grid-pattern";
 import ShimmerButton from "@/components/magicui/shimmer-button";
-import Cube from "../assets/cube.png"; // Ensure this path is correct
+import Cube from "../../../assets/cube.png"; // Ensure this path is correct
 import Image from "next/image";
 
 // Define the props for DetailedCard

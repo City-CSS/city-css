@@ -1,4 +1,4 @@
-import InternTable from "@/components/internTable";
+import InternTable from "@/app/internships/components/internTable";
 import Header from "@/components/Header";
 function page() {
   return (
