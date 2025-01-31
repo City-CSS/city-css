@@ -3,7 +3,7 @@ import HeroSection from "@/app/home/components/Hero";
 import Usage from "@/app/home/components/Usage";
 import JoinForm from "@/components/JoinForm";
 import SponsorForm from "@/components/SponsorForm";
-import { IconCloud } from "@/components/IconCloud";
+import { IconCloudComponent } from "@/components/IconCloudComponent";
 import Footer from "@/components/Footer";
 import { FileTreeDemo } from "@/app/home/components/FileTree";
 import TopBanner from "@/components/TopBanner";
@@ -16,7 +16,7 @@ export default function Home() {
       <JoinForm />
       <FileTreeDemo />
 
-      <IconCloud />
+      <IconCloudComponent />
       <SponsorForm
           colour={"red"}
       />
