@@ -162,7 +162,7 @@ const Hero: FC = () => {
             <div className="mx-auto max-w-2xl text-center mb-8">
               <a href="https://discord.gg/RMEfBSeSPU">
                 <div className=" bg-gray-100 text-md leading-6 text-gray-400 ring-1 ring-gray-900/10 hover:ring-gray-900/20 rounded-full px-5">
-                  Join our discord Now!
+                  Join us in our journey!
                 </div>
               </a>
             </div>
@@ -187,12 +187,6 @@ const Hero: FC = () => {
                 </ShimmerButton>
               </a>
             </div>
-            <p className="text-sm text-gray-500">
-              <span role="img" aria-label="calendar">
-                🗓️
-              </span>{" "}
-              Join us to participate in events
-            </p>
           </div>
         </div>
       </div>
