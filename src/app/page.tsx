@@ -1,25 +1,25 @@
 import Header from "@/components/Header";
-import HeroSection from "@/components/Hero";
-import Usage from "@/components/Usage";
+import HeroSection from "@/app/home/components/Hero";
+import Usage from "@/app/home/components/Usage";
 import JoinForm from "@/components/JoinForm";
 import SponsorForm from "@/components/SponsorForm";
-import { IconCloudDemo } from "@/components/IconCloudDemo";
+import { IconCloudComponent } from "@/components/IconCloudComponent";
 import Footer from "@/components/Footer";
-import { FileTreeDemo } from "@/components/FileTree";
+import { FileTreeDemo } from "@/app/home/components/FileTree";
 import TopBanner from "@/components/TopBanner";
-import LogoCollabs from "@/components/logoCollabs";
 export default function Home() {
   return (
     <>
-      <TopBanner />
-
+        <TopBanner/>
       <Header />
       <HeroSection />
       <JoinForm />
       <FileTreeDemo />
 
-      <IconCloudDemo />
-      <SponsorForm />
+      <IconCloudComponent />
+      <SponsorForm
+          colour={"red"}
+      />
       <Usage />
       <Footer />
     </>

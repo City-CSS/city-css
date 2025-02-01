@@ -1,26 +1,18 @@
 "use client";
 
-import { useState } from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 import {
   Dialog,
   DialogPanel,
-  Disclosure,
-  DisclosureButton,
-  DisclosurePanel,
   Popover,
   PopoverButton,
   PopoverGroup,
   PopoverPanel,
 } from "@headlessui/react";
 import {
-  ArrowPathIcon,
   CodeBracketIcon,
   Bars3Icon,
-  ChartPieIcon,
-  CursorArrowRaysIcon,
-  FingerPrintIcon,
-  SquaresPlusIcon,
   XMarkIcon,
   GlobeAltIcon,
   UserIcon,
@@ -29,10 +21,11 @@ import {
 
 import {
   ChevronDownIcon,
-  PhoneIcon,
-  PlayCircleIcon,
 } from "@heroicons/react/20/solid";
 import Logo from "../assets/logos.png";
+import { usePathname } from "next/navigation";
+import '../app/globals.css'; // Ensure this is loaded
+
 const products = [
   {
     name: "Git Sessions",
@@ -59,9 +52,30 @@ const products = [
     icon: UserIcon,
   },
 ];
+const pages = [
+  {
+    name: "Home",
+    link: "/"
+  },
+  {
+    name: "About us",
+    link: "/about-us"
+  },
+  {
+    name: "Internships",
+    link: "/internships"
+  },
+  {
+    name: "Collaborations",
+    link: "/collaborations"
+  }
+]
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const pathname = usePathname();
+  const isActive = (path: string) => pathname === path;
+
 
   // Toggle function
   const toggleMobileMenu = () => {
@@ -72,7 +86,7 @@ export default function Header() {
     <header className="bg-white z-50 sticky top-0 shadow-sm">
       <nav
         aria-label="Global"
-        className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8"
+        className="mx-auto flex max-w-7xl items-center justify-between p-4 lg:px-8"
       >
         <div className="flex lg:flex-none">
           <a href="/" className="-m-1.5 p-1.5">
@@ -93,9 +107,9 @@ export default function Header() {
             )}
         </div>
 
-        <PopoverGroup className="hidden lg:flex lg:gap-x-12 mx-auto">
+        <PopoverGroup className="hidden lg:flex lg:gap-x-4 mx-auto">
           <Popover className="relative">
-            <PopoverButton className="flex items-center gap-x-1 text-sm font-semibold leading-6 text-gray-900">
+            <PopoverButton className="flex items-center gap-x-1 py-2 text-base font-semibold leading-6 text-gray-900">
               Sessions
               <ChevronDownIcon aria-hidden="true" className="h-5 w-5 flex-none text-gray-400" />
             </PopoverButton>
@@ -124,15 +138,26 @@ export default function Header() {
               </div>
             </PopoverPanel>
           </Popover>
-          <a href="/about-us" className="text-sm font-semibold leading-6 text-gray-900">
-            About us
-          </a>
-          <a href="/internships" className="text-sm font-semibold leading-6 text-gray-900">
-            Internships
-          </a>
-          <a href="#" className="text-sm font-semibold leading-6 text-gray-900">
-            Collaborations
-          </a>
+          {pages.map((page) =>{
+                const isActivePage = isActive(page.link);
+                return (
+                    <a
+                        key={page.name}
+                        href={page.link}
+                        className={`block px-4 py-2 rounded text-base font-semibold leading-7 ${
+                            isActivePage
+                                ? "text-white" 
+                                : "text-gray-900 hover:bg-gray-50"
+                        }`}
+                        style={{
+                          backgroundColor: isActivePage ? "var(--light-red)" : "transparent",
+                        }}
+                    >
+                      {page.name}
+                    </a>
+                );
+              }
+          )}
         </PopoverGroup>
       </nav>
 
@@ -181,15 +206,26 @@ export default function Header() {
                 </div>
               </PopoverPanel>
             </Popover>
-            <a href="/internships" className="block text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">
-              Internships
-            </a>
-            <a href="/about-us" className="block text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">
-              About us
-            </a>
-            <a href="/collaborations" className="block text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">
-              Collaborations
-            </a>
+            {pages.map((page) =>{
+                  const isActivePage = isActive(page.link);
+                  return (
+                      <a
+                          key={page.name}
+                          href={page.link}
+                          className={`block px-2 py-2 rounded text-base font-semibold leading-7 ${
+                              isActivePage
+                                  ? "text-white"
+                                  : "text-gray-900 hover:bg-gray-50"
+                          }`}
+                          style={{
+                            backgroundColor: isActivePage ? "var(--light-red)" : "transparent",
+                          }}
+                      >
+                        {page.name}
+                      </a>
+                  );
+                }
+            )}
           </div>
         </DialogPanel>
       </Dialog>

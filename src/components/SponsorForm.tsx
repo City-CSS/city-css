@@ -1,28 +1,53 @@
 "use client";
 
 import React, { useState } from 'react';
+import TextField from '@mui/material/TextField';
 
 // --- BANNER ---
-export default function Banner() {
+export default function Banner(
+    {colour} : {colour : string}
+) {
   const [isFormOpen, setIsFormOpen] = useState(false);
+  // colour configuration
+  const colourConfig = {
+    red: {
+      background: "bg-red-500 bg-gradient-to-r from-[#a73737] to-[#7a2828]",
+      text: "text-white",
+      button: "bg-white text-slate-900 hover:bg-blue-50 active:bg-blue-200 active:text-slate-600 focus-visible:outline-white",
+    },
+    white: {
+      background: " ",
+      text: "text-slate-900",
+      button: "bg-gray-900 text-white hover:bg-gray-700 focus-visible:outline-gray-900",
+    }
+  };
+  type ColorConfig = {
+    background: string;
+    text: string;
+    button: string;
+  };
+  // @ts-ignore
+  const styles: ColorConfig = colourConfig[colour];
 
   return (
     <section
       id="get-started-today"
-      className="relative overflow-hidden bg-red-500 py-24 bg-gradient-to-r from-[#a73737] to-[#7a2828]"
+      className={`relative overflow-hidden py-24 ${styles.background}`}
     >
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-lg text-center">
-          <h2 className="font-display text-4xl tracking-tight text-white font-semibold sm:text-5xl">
+          <h2 className={`font-display text-4xl tracking-tight ${styles.text} font-semibold sm:text-5xl`}>
             Want to collaborate?
           </h2>
-          <p className="mt-4 text-lg tracking-tight text-white">
+          <p className={`mt-4 text-lg tracking-tight ${styles.text}`}>
             Power a community of tech enthusiasts by becoming a sponsor. 
             Fuel innovation, skills, and spark shared success.
           </p>
           <button
             onClick={() => setIsFormOpen(true)}
-            className="group inline-flex items-center justify-center rounded-full py-2 px-4 text-sm font-semibold focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2 bg-white text-slate-900 hover:bg-blue-50 active:bg-blue-200 active:text-slate-600 focus-visible:outline-white mt-10"
+            className={`group inline-flex items-center justify-center rounded-full py-2 px-4 text-sm
+            font-semibold focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2 mt-10
+            ${styles.button}`}
           >
             Get In Touch 
           </button>
@@ -131,76 +156,59 @@ function CollaborationForm({ onClose }: CollaborationFormProps) {
   return (
     <div className="w-full">
       <h2 className="text-2xl font-bold mb-6 text-center">Collaboration Offer</h2>
-      <form onSubmit={handleSubmit}>
-        {/* --- Email Field --- */}
-        <div className="mb-4">
-          <label 
-            htmlFor="email" 
-            className="block text-gray-700 font-bold mb-2"
-          >
-            Email *
-          </label>
-          <input
-            type="email"
-            id="email"
-            name="email"
-            value={formData.email}
-            onChange={handleChange}
-            className={`w-full px-3 py-2 border rounded-md focus:outline-none 
-              ${errors.email ? 'border-red-500' : 'border-gray-300'}`}
-            placeholder="your.email@example.com"
+      <form onSubmit={handleSubmit} className={"grid place-items-center"}>
+        <div className={"space-y-8"}>
+          {/* --- Email Field --- */}
+          <TextField
+              id="email"
+              name="email"
+              label="Email"
+              type="email"
+              variant="outlined"
+              placeholder="your.email@example.com"
+              value={formData.email}
+              onChange={handleChange}
+              error={!!errors.email}
+              helperText={errors.email}
+              fullWidth
           />
-          {errors.email && (
-            <p className="text-red-500 text-sm mt-1">{errors.email}</p>
-          )}
-        </div>
-
-        {/* --- Company Field --- */}
-        <div className="mb-4">
-          <label 
-            htmlFor="company" 
-            className="block text-gray-700 font-bold mb-2"
-          >
-            Company *
-          </label>
-          <input
-            type="text"
-            id="company"
-            name="company"
-            value={formData.company}
-            onChange={handleChange}
-            className={`w-full px-3 py-2 border rounded-md focus:outline-none 
-              ${errors.company ? 'border-red-500' : 'border-gray-300'}`}
-            placeholder="Your Company Name"
+          {/* --- Company Field --- */}
+          <TextField
+              id="company"
+              name="company"
+              label="Company"
+              type="text"
+              variant="outlined"
+              placeholder="Company"
+              value={formData.company}
+              onChange={handleChange}
+              error={!!errors.company}
+              helperText={errors.company}
+              fullWidth
           />
-          {errors.company && (
-            <p className="text-red-500 text-sm mt-1">{errors.company}</p>
-          )}
-        </div>
-
-        {/* --- Interest Field --- */}
-        <div className="mb-4">
-          <label 
-            htmlFor="interest" 
-            className="block text-gray-700 font-bold mb-2"
-          >
-            Your Interest in Collaborating
-          </label>
-          <textarea
-            id="interest"
-            name="interest"
-            value={formData.interest}
-            onChange={handleChange}
-            className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none"
-            placeholder="Optional: Tell us about your collaboration interests"
-            rows={4}
+          {/* --- Interest Field --- */}
+          <TextField
+              id="interst"
+              name="interest"
+              label="Interest"
+              type="text"
+              variant="outlined"
+              placeholder="Tell us about your collaboration interests"
+              value={formData.interest}
+              onChange={handleChange}
+              error={!!errors.interest}
+              helperText={errors.interest}
+              fullWidth
+              multiline
+              minRows={3}
+              maxRows={6}
           />
         </div>
 
         {/* --- Submit Button --- */}
         <button
           type="submit"
-          className="mx-auto group inline-flex items-center justify-center rounded-full py-2 px-4 text-sm font-semibold focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2 bg-red-700 text-white hover:bg-red-600 active:bg-blue-200 active:text-slate-600 focus-visible:outline-white mt-10"
+          className="mx-auto group inline-flex items-center justify-center rounded-full py-2 px-4 text-base font-semibold focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2 bg-red-700 text-white hover:bg-red-600 active:bg-blue-200 active:text-slate-600 focus-visible:outline-white mt-10"
         >
           Submit
         </button>

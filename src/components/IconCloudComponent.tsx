@@ -33,7 +33,7 @@ const slugs = [
   "figma",
 ];
 
-export function IconCloudDemo() {
+export function IconCloudComponent() {
   return (
     <div className="flex flex-col items-center justify-center py-24 bg-background text-white">
       <div className="mx-auto max-w-4xl text-center mb-4 px-4">
