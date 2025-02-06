@@ -30,13 +30,13 @@ const products = [
   {
     name: "Git Sessions",
     description: "Learn basics of git and version control",
-    href: "/se",
+    href: "modules/se",
     icon: CodeBracketIcon,
   },
   {
     name: "AI & ML",
     description: "Get rolling and stay on top of the market",
-    href: "#",
+    href: "modules/aiml",
     icon: GlobeAltIcon,
   },
   {

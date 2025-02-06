@@ -1,5 +1,5 @@
 import React from "react";
-import Header from "../../components/Header";
+import Header from "../../../components/Header";
 const sessions = [
   {
     title: "Session 1: Introduction to Git and Version Control",
@@ -52,7 +52,7 @@ export default function GitPage() {
     <div>
       <Header />
       <div className="max-w-3xl mx-auto p-8 bg-white rounded-lg shadow-md">
-        <h1 className="text-5xl font-bold mb-6 text-gray-800">Git Sessions</h1>
+        <h1 className="text-5xl font-bold mb-6 text-gray-800">AI and Machine Learning</h1>
 
         <h2 className="text-3xl font-semibold mb-4 text-gray-700">
           Table of Contents
