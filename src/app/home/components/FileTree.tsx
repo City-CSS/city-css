@@ -51,7 +51,7 @@ export function FileTreeDemo() {
                       </p>
                     </File>
                     <File value="4">
-                      <p className="pl-6">Session 4: Let's write some code</p>
+                      <p className="pl-6">Session 4: Let&apos;s write some code</p>
                     </File>
                   </Folder>
                   <Folder value="5" element="AI & ML">
@@ -72,6 +72,16 @@ export function FileTreeDemo() {
                     <File value="12">
                       <p className="pl-6">Coming soon :)</p>
                     </File>
+                    <File value="13">
+                      <p className="pl-6">Session 1: The Basics</p>
+                    </File>
+                    <File value="14">
+                      <p className="pl-6">Session 2: Decision Trees</p>
+                    </File>
+                    <File value="15">
+                      <p className="pl-6">Session 3: KNN and SVM</p>
+                    </File>
+
                   </Folder>
                 </Folder>
               </div>
