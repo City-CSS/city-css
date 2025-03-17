@@ -68,20 +68,16 @@ export function FileTreeDemo() {
                       <p className="pl-6">Session 4: Clustering</p>
                     </File>
                   </Folder>
-                  <Folder value="11" element="BlockChain">
+                  <Folder value="11" element="Blockchain">
                     <File value="12">
-                      <p className="pl-6">Coming soon :)</p>
+                      <p className="pl-6">Session 1: The Basics and Wallets</p>
                     </File>
                     <File value="13">
-                      <p className="pl-6">Session 1: The Basics</p>
+                      <p className="pl-6">Session 2: Smart Contracts</p>
                     </File>
                     <File value="14">
-                      <p className="pl-6">Session 2: Decision Trees</p>
+                      <p className="pl-6">Session 3: Encode Blockchain Workshop</p>
                     </File>
-                    <File value="15">
-                      <p className="pl-6">Session 3: KNN and SVM</p>
-                    </File>
-
                   </Folder>
                 </Folder>
               </div>
