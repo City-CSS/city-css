@@ -1,26 +1,62 @@
 [
   {
-    "imageSrc": "/about-us/committee/danylo.jpg",
-    "name": "Danylo Piatyhorets",
+    "imageSrc": "/about-us/committee/TalipTun.jpg",
+    "name": "Talip Tun",
     "role": "President",
+    "linkedInLink": "https://www.linkedin.com/in/talip-tun/"
+  },
+  {
+    "imageSrc": "/about-us/committee/YaqubRahman2.jpg",
+    "name": "Yaqub Rahman",
+    "role": "Vice President | Tech Officer",
+    "linkedInLink": "https://www.linkedin.com/in/yaqub-r/"
+  },
+  {
+    "imageSrc": "/about-us/committee/SayedIqbal.jpg",
+    "name": "Sayed Iqbal",
+    "role": "Social Officer",
+    "linkedInLink": "https://www.linkedin.com/in/sayed-iqbal/"
+  },
+  {
+    "imageSrc": "/about-us/committee/YaseenBarlas.jpg",
+    "name": "Yaseen Barlas",
+    "role": "Finance Officer",
+    "linkedInLink": "https://www.linkedin.com/in/yaseen-b-419942246/"
+  },
+  {
+    "imageSrc": "/about-us/committee/AhmadSabsaby.jpg",
+    "name": "Ahmad Sabsaby",
+    "role": "Communications Officer",
+    "linkedInLink": "https://www.linkedin.com/in/ahmad-sabsaby-4303102b8/"
+  },
+  {
+    "imageSrc": "/about-us/committee/EthanKan.jpg",
+    "name": "Ethan Kan",
+    "role": "Design Officer",
+    "linkedInLink": "https://www.linkedin.com/in/ethan-kan-3ba5b2384/"
+  },
+  {
+    "imageSrc": "/about-us/committee/Default.png",
+    "name": "Warda Hussien",
+    "role": "Social Officer",
+    "linkedInLink": "https://www.linkedin.com/in/warda-hussein-/"
+  },
+  {
+    "imageSrc": "/about-us/committee/Danylo.png",
+    "name": "Danylo Piatyhorets",
+    "role": "Mentor",
     "linkedInLink": "https://www.linkedin.com/in/danylo-piatyhorets-1bb16b293/"
   },
   {
     "imageSrc": "/about-us/committee/filippo.png",
     "name": "Filippo Vicini",
-    "role": "Vice President | Tech Officer",
+    "role": "Mentor",
     "linkedInLink": "https://www.linkedin.com/in/filippo-vicini-6ab35921a/"
   },
   {
     "imageSrc": "/about-us/committee/aisari.jpeg",
     "name": "Aisari Amirov",
-    "role": "Communication Officer",
+    "role": "Mentor",
     "linkedInLink": "https://www.linkedin.com/in/aisari-amirov-837164294/"
-  },
-  {
-    "imageSrc": "/about-us/committee/karolina.png",
-    "name": "Karolina Wasnik",
-    "role": "Finance & Event Officer",
-    "linkedInLink": "https://www.linkedin.com/in/karolina-wasnik/"
   }
 ]
