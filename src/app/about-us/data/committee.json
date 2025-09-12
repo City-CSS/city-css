@@ -6,7 +6,7 @@
     "linkedInLink": "https://www.linkedin.com/in/talip-tun/"
   },
   {
-    "imageSrc": "/about-us/committee/YaqubRahman.jpg",
+    "imageSrc": "/about-us/committee/YaqubRahman2.jpg",
     "name": "Yaqub Rahman",
     "role": "Vice President | Tech Officer",
     "linkedInLink": "https://www.linkedin.com/in/yaqub-r/"
@@ -14,7 +14,7 @@
   {
     "imageSrc": "/about-us/committee/SayedIqbal.jpg",
     "name": "Sayed Iqbal",
-    "role": "Communication Officer",
+    "role": "Social Officer",
     "linkedInLink": "https://www.linkedin.com/in/sayed-iqbal/"
   },
   {
@@ -22,6 +22,24 @@
     "name": "Yaseen Barlas",
     "role": "Finance Officer",
     "linkedInLink": "https://www.linkedin.com/in/yaseen-b-419942246/"
+  },
+  {
+    "imageSrc": "/about-us/committee/AhmadSabsaby.jpg",
+    "name": "Ahmad Sabsaby",
+    "role": "Communications Officer",
+    "linkedInLink": "https://www.linkedin.com/in/ahmad-sabsaby-4303102b8/"
+  },
+  {
+    "imageSrc": "/about-us/committee/EthanKan.jpg",
+    "name": "Ethan Kan",
+    "role": "Design Officer",
+    "linkedInLink": "https://www.linkedin.com/in/yaseen-b-419942246/"
+  },
+  {
+    "imageSrc": "/about-us/committee/Default.png",
+    "name": "Warda Hussien",
+    "role": "Social Officer",
+    "linkedInLink": "https://www.linkedin.com/in/warda-hussein-/"
   },
   {
     "imageSrc": "/about-us/committee/danylo.jpg",
